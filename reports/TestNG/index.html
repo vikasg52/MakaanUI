@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 13 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Suite">
+              <span class="suite-name border-failed">Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                    <span>testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">61 methods, 13 failed,   48 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="BuyFilters">BuyFilters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.ConnectNowTest" hash-for-method="ConnectNow">ConnectNow</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.ConnectNowTest" hash-for-method="ContactSeller">ContactSeller</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="ListProperty">ListProperty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SearchTest" hash-for-method="ValidateBuyLandmark">ValidateBuyLandmark</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.ConnectNowTest" hash-for-method="ValidateDB">ValidateDB</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.PYRTest" hash-for-method="ValidatePYRBuy">ValidatePYRBuy</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.PYRTest" hash-for-method="ValidatePYRRent">ValidatePYRRent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SearchTest" hash-for-method="ValidateRentLandmark">ValidateRentLandmark</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidateSetAlert">ValidateSetAlert</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidateShortlistBuy">ValidateShortlistBuy</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidateSidecards">ValidateSidecards</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidateSortingFilter">ValidateSortingFilter</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="AppDrawer">AppDrawer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="BuilderDrawer">BuilderDrawer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="BuyerJourneyDrawer">BuyerJourneyDrawer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="CityDrawer">CityDrawer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="CloseChat">CloseChat</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="MakaanIQDrawer">MakaanIQDrawer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="RentFilters">RentFilters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.LoginTest" hash-for-method="Signup">Signup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SearchTest" hash-for-method="ValidateBuilder">ValidateBuilder</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SearchTest" hash-for-method="ValidateBuyLocalities">ValidateBuyLocalities</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SearchTest" hash-for-method="ValidateBuyProject">ValidateBuyProject</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="ValidateBuyerJourney">ValidateBuyerJourney</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidateCardBuy">ValidateCardBuy</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidateCardRent">ValidateCardRent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="ValidateCashBackCard">ValidateCashBackCard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="ValidateDownloadAppButton">ValidateDownloadAppButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="ValidateFindJoy">ValidateFindJoy</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.LoginTest" hash-for-method="ValidateForgotPassword">ValidateForgotPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="ValidateHighscoring">ValidateHighscoring</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidateLocalityBuy">ValidateLocalityBuy</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidateLocalityRent">ValidateLocalityRent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.LoginTest" hash-for-method="ValidateLoginButton">ValidateLoginButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="ValidateMainImage">ValidateMainImage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.LoginTest" hash-for-method="ValidateMakaanLogin">ValidateMakaanLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.LoginTest" hash-for-method="ValidateMakaanLogout">ValidateMakaanLogout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidateMapListToggle">ValidateMapListToggle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="ValidateMchatCard">ValidateMchatCard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="ValidateMplusCard">ValidateMplusCard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidateProjectBuy">ValidateProjectBuy</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidatePropertyRent">ValidatePropertyRent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidateReadMoreBuy">ValidateReadMoreBuy</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidateReadMorerent">ValidateReadMorerent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SearchTest" hash-for-method="ValidateRentLocalities">ValidateRentLocalities</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SearchTest" hash-for-method="ValidateRentProject">ValidateRentProject</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.LoginTest" hash-for-method="ValidateResetPassword">ValidateResetPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="ValidateSearchPlaceHolder">ValidateSearchPlaceHolder</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidateSellerBuy">ValidateSellerBuy</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="ValidateSellerLink">ValidateSellerLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidateSellerRent">ValidateSellerRent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidateShortlistrent">ValidateShortlistrent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidateSponsoredLink">ValidateSponsoredLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="ValidateSpotlightProject">ValidateSpotlightProject</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SearchTest" hash-for-method="ValidateSuburbBuy">ValidateSuburbBuy</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SearchTest" hash-for-method="ValidateSuburbRent">ValidateSuburbRent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidateViewMoreBuy">ValidateViewMoreBuy</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="ValidateViewMoreRent">ValidateViewMoreRent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.SERPTest" hash-for-method="Validatepagination">Validatepagination</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.makaan.Test.HomeTest" hash-for-method="VerifyAppSection">VerifyAppSection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.makaan.Test.SearchTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateBuyLandmark">
+                  </a> <!-- ValidateBuyLandmark -->
+                  <span class="method-name">ValidateBuyLandmark</span>
+                  <div class="stack-trace">java.lang.AssertionError: Fail: All Landmark Tested for Buy Tab are not successfullFail: Not able to verify Property Type with suggestion kashmere gate,delhi expected [true] but found [false]
+	at com.makaan.Test.SearchTest.ValidateBuyLandmark(SearchTest.java:176)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateRentLandmark">
+                  </a> <!-- ValidateRentLandmark -->
+                  <span class="method-name">ValidateRentLandmark</span>
+                  <div class="stack-trace">java.lang.AssertionError: Fail: All Landmark Tested for Rent Tab are not successfull expected [true] but found [false]
+	at com.makaan.Test.SearchTest.ValidateRentLandmark(SearchTest.java:196)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.makaan.Test.ConnectNowTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ConnectNow">
+                  </a> <!-- ConnectNow -->
+                  <span class="method-name">ConnectNow</span>
+                  <div class="stack-trace">java.lang.AssertionError: Fail: Lead popup did not open expected [true] but found [false]
+	at com.makaan.Test.ConnectNowTest.ConnectNow(ConnectNowTest.java:45)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ContactSeller">
+                  </a> <!-- ContactSeller -->
+                  <span class="method-name">ContactSeller</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//div[@data-module=&apos;topSellerPyr&apos;] (tried for 60 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.sivT4F}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 42b2a5df46f1c5a078be3c4161813443
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
+	at com.makaan.Webhelper.Webhelper.WaitUntillVisiblility(Webhelper.java:74)
+	at com.makaan.Middleware.ConnectNowMiddleware.ContactSellers(ConnectNowMiddleware.java:372)
+	at com.makaan.Test.ConnectNowTest.ContactSeller(ConnectNowTest.java:128)
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateDB">
+                  </a> <!-- ValidateDB -->
+                  <span class="method-name">ValidateDB</span>
+                  <div class="stack-trace">java.lang.AssertionError: Fail: Lead Drop was not successfull as Db did not get updated expected [true] but found [false]
+	at com.makaan.Test.ConnectNowTest.ValidateDB(ConnectNowTest.java:66)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.makaan.Test.SERPTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="BuyFilters">
+                  </a> <!-- BuyFilters -->
+                  <span class="method-name">BuyFilters</span>
+                  <div class="stack-trace">java.lang.AssertionError: Fail: Property Counts are not matching for removing set Budget filter39,065 39,079 expected [true] but found [false]
+	at com.makaan.Test.SERPTest.BuyFilters(SERPTest.java:45)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateSetAlert">
+                  </a> <!-- ValidateSetAlert -->
+                  <span class="method-name">ValidateSetAlert</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (850, 16). Other element would receive the click: &lt;html lang=&quot;en&quot;&gt;...&lt;/html&gt;
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 191 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.Lbu6LX}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6ddea751d3ba69d173667bde2abccfe6
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Webhelper.Webhelper.ClickbyXpath(Webhelper.java:124)
+	at com.makaan.Middleware.SERPMiddleware.SetAlert(SERPMiddleware.java:687)
+	at com.makaan.Test.SERPTest.ValidateSetAlert(SERPTest.java:498)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateShortlistBuy">
+                  </a> <!-- ValidateShortlistBuy -->
+                  <span class="method-name">ValidateShortlistBuy</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (869, 10). Other element would receive the click: &lt;ul class=&quot;step1 pull-right clearfix&quot;&gt;...&lt;/ul&gt;
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 34 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.Lbu6LX}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6ddea751d3ba69d173667bde2abccfe6
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Webhelper.Webhelper.ClickbyXpath(Webhelper.java:124)
+	at com.makaan.Middleware.SERPMiddleware.VerifyShortList(SERPMiddleware.java:672)
+	at com.makaan.Test.SERPTest.ValidateShortlistBuy(SERPTest.java:304)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateSidecards">
+                  </a> <!-- ValidateSidecards -->
+                  <span class="method-name">ValidateSidecards</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (1095, 383). Other element would receive the click: &lt;div class=&quot;message-wrapper them&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 27 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.Lbu6LX}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6ddea751d3ba69d173667bde2abccfe6
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Webhelper.Webhelper.ClickbyXpath(Webhelper.java:124)
+	at com.makaan.Middleware.SERPMiddleware.VerifyLocalityCard(SERPMiddleware.java:825)
+	at com.makaan.Middleware.SERPMiddleware.SideCards(SERPMiddleware.java:804)
+	at com.makaan.Test.SERPTest.ValidateSidecards(SERPTest.java:362)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateSortingFilter">
+                  </a> <!-- ValidateSortingFilter -->
+                  <span class="method-name">ValidateSortingFilter</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (1115, 7). Other element would receive the click: &lt;ul class=&quot;step1 pull-right clearfix&quot;&gt;...&lt;/ul&gt;
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 38 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.Lbu6LX}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6ddea751d3ba69d173667bde2abccfe6
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Webhelper.Webhelper.ClickbyXpath(Webhelper.java:124)
+	at com.makaan.Middleware.SERPMiddleware.filterbySellerRating(SERPMiddleware.java:1044)
+	at com.makaan.Middleware.SERPMiddleware.SortingFilter(SERPMiddleware.java:1084)
+	at com.makaan.Test.SERPTest.ValidateSortingFilter(SERPTest.java:460)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.makaan.Test.PYRTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidatePYRBuy">
+                  </a> <!-- ValidatePYRBuy -->
+                  <span class="method-name">ValidatePYRBuy</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (683, 335). Other element would receive the click: &lt;div class=&quot;requirement-box clearfix property moveup js-focus&quot; data-type=&quot;property-type-placeholder&quot; style=&quot;z-index: 2;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 78 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.TVqeXk}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0968aa1719f2b9c44d75b5af93d7ded4
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Webhelper.Webhelper.ClickbyXpath(Webhelper.java:124)
+	at com.makaan.Middleware.PYRMiddleware.PYRRequirement(PYRMiddleware.java:229)
+	at com.makaan.Middleware.PYRMiddleware.PYRBuy(PYRMiddleware.java:63)
+	at com.makaan.Test.PYRTest.ValidatePYRBuy(PYRTest.java:41)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidatePYRRent">
+                  </a> <!-- ValidatePYRRent -->
+                  <span class="method-name">ValidatePYRRent</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (1048, 584). Other element would receive the click: &lt;div data-type=&quot;pyr-overlay&quot; class=&quot;thoverlay&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 39 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.TVqeXk}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0968aa1719f2b9c44d75b5af93d7ded4
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Webhelper.Webhelper.ClickbyXpath(Webhelper.java:124)
+	at com.makaan.Middleware.PYRMiddleware.PYRRequirement(PYRMiddleware.java:208)
+	at com.makaan.Middleware.PYRMiddleware.PYRRent(PYRMiddleware.java:78)
+	at com.makaan.Test.PYRTest.ValidatePYRRent(PYRTest.java:63)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.makaan.Test.HomeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ListProperty">
+                  </a> <!-- ListProperty -->
+                  <span class="method-name">ListProperty</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (1481, 352)
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 48 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.AaMMet}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: f8b8ca32dc97061a7dd97a91d92999f6
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Middleware.HomeMiddleware.SwitchWindow(HomeMiddleware.java:629)
+	at com.makaan.Middleware.HomeMiddleware.VerifyListYourProperty(HomeMiddleware.java:552)
+	at com.makaan.Test.HomeTest.ListProperty(HomeTest.java:256)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.makaan.Test.SearchTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateBuilder">
+                  </a> <!-- ValidateBuilder -->
+                  <span class="method-name">ValidateBuilder</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateBuyLocalities">
+                  </a> <!-- ValidateBuyLocalities -->
+                  <span class="method-name">ValidateBuyLocalities</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateBuyProject">
+                  </a> <!-- ValidateBuyProject -->
+                  <span class="method-name">ValidateBuyProject</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateRentLocalities">
+                  </a> <!-- ValidateRentLocalities -->
+                  <span class="method-name">ValidateRentLocalities</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateRentProject">
+                  </a> <!-- ValidateRentProject -->
+                  <span class="method-name">ValidateRentProject</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateSuburbBuy">
+                  </a> <!-- ValidateSuburbBuy -->
+                  <span class="method-name">ValidateSuburbBuy</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateSuburbRent">
+                  </a> <!-- ValidateSuburbRent -->
+                  <span class="method-name">ValidateSuburbRent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.makaan.Test.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Signup">
+                  </a> <!-- Signup -->
+                  <span class="method-name">Signup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateForgotPassword">
+                  </a> <!-- ValidateForgotPassword -->
+                  <span class="method-name">ValidateForgotPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateLoginButton">
+                  </a> <!-- ValidateLoginButton -->
+                  <span class="method-name">ValidateLoginButton</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateMakaanLogin">
+                  </a> <!-- ValidateMakaanLogin -->
+                  <span class="method-name">ValidateMakaanLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateMakaanLogout">
+                  </a> <!-- ValidateMakaanLogout -->
+                  <span class="method-name">ValidateMakaanLogout</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateResetPassword">
+                  </a> <!-- ValidateResetPassword -->
+                  <span class="method-name">ValidateResetPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.makaan.Test.HomeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AppDrawer">
+                  </a> <!-- AppDrawer -->
+                  <span class="method-name">AppDrawer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="BuilderDrawer">
+                  </a> <!-- BuilderDrawer -->
+                  <span class="method-name">BuilderDrawer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="BuyerJourneyDrawer">
+                  </a> <!-- BuyerJourneyDrawer -->
+                  <span class="method-name">BuyerJourneyDrawer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CityDrawer">
+                  </a> <!-- CityDrawer -->
+                  <span class="method-name">CityDrawer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CloseChat">
+                  </a> <!-- CloseChat -->
+                  <span class="method-name">CloseChat</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="MakaanIQDrawer">
+                  </a> <!-- MakaanIQDrawer -->
+                  <span class="method-name">MakaanIQDrawer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateBuyerJourney">
+                  </a> <!-- ValidateBuyerJourney -->
+                  <span class="method-name">ValidateBuyerJourney</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateCashBackCard">
+                  </a> <!-- ValidateCashBackCard -->
+                  <span class="method-name">ValidateCashBackCard</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateDownloadAppButton">
+                  </a> <!-- ValidateDownloadAppButton -->
+                  <span class="method-name">ValidateDownloadAppButton</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateFindJoy">
+                  </a> <!-- ValidateFindJoy -->
+                  <span class="method-name">ValidateFindJoy</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateHighscoring">
+                  </a> <!-- ValidateHighscoring -->
+                  <span class="method-name">ValidateHighscoring</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateMainImage">
+                  </a> <!-- ValidateMainImage -->
+                  <span class="method-name">ValidateMainImage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateMchatCard">
+                  </a> <!-- ValidateMchatCard -->
+                  <span class="method-name">ValidateMchatCard</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateMplusCard">
+                  </a> <!-- ValidateMplusCard -->
+                  <span class="method-name">ValidateMplusCard</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateSearchPlaceHolder">
+                  </a> <!-- ValidateSearchPlaceHolder -->
+                  <span class="method-name">ValidateSearchPlaceHolder</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateSellerLink">
+                  </a> <!-- ValidateSellerLink -->
+                  <span class="method-name">ValidateSellerLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateSpotlightProject">
+                  </a> <!-- ValidateSpotlightProject -->
+                  <span class="method-name">ValidateSpotlightProject</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VerifyAppSection">
+                  </a> <!-- VerifyAppSection -->
+                  <span class="method-name">VerifyAppSection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.makaan.Test.SERPTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="RentFilters">
+                  </a> <!-- RentFilters -->
+                  <span class="method-name">RentFilters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateCardBuy">
+                  </a> <!-- ValidateCardBuy -->
+                  <span class="method-name">ValidateCardBuy</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateCardRent">
+                  </a> <!-- ValidateCardRent -->
+                  <span class="method-name">ValidateCardRent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateLocalityBuy">
+                  </a> <!-- ValidateLocalityBuy -->
+                  <span class="method-name">ValidateLocalityBuy</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateLocalityRent">
+                  </a> <!-- ValidateLocalityRent -->
+                  <span class="method-name">ValidateLocalityRent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateMapListToggle">
+                  </a> <!-- ValidateMapListToggle -->
+                  <span class="method-name">ValidateMapListToggle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateProjectBuy">
+                  </a> <!-- ValidateProjectBuy -->
+                  <span class="method-name">ValidateProjectBuy</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidatePropertyRent">
+                  </a> <!-- ValidatePropertyRent -->
+                  <span class="method-name">ValidatePropertyRent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateReadMoreBuy">
+                  </a> <!-- ValidateReadMoreBuy -->
+                  <span class="method-name">ValidateReadMoreBuy</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateReadMorerent">
+                  </a> <!-- ValidateReadMorerent -->
+                  <span class="method-name">ValidateReadMorerent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateSellerBuy">
+                  </a> <!-- ValidateSellerBuy -->
+                  <span class="method-name">ValidateSellerBuy</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateSellerRent">
+                  </a> <!-- ValidateSellerRent -->
+                  <span class="method-name">ValidateSellerRent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateShortlistrent">
+                  </a> <!-- ValidateShortlistrent -->
+                  <span class="method-name">ValidateShortlistrent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateSponsoredLink">
+                  </a> <!-- ValidateSponsoredLink -->
+                  <span class="method-name">ValidateSponsoredLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateViewMoreBuy">
+                  </a> <!-- ValidateViewMoreBuy -->
+                  <span class="method-name">ValidateViewMoreBuy</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateViewMoreRent">
+                  </a> <!-- ValidateViewMoreRent -->
+                  <span class="method-name">ValidateViewMoreRent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Validatepagination">
+                  </a> <!-- Validatepagination -->
+                  <span class="method-name">Validatepagination</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/home/surabhi/labs/AutomationBuyerWeb/testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;test name=&quot;Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.makaan.Test.LoginTest&quot;/&gt;
+      &lt;class name=&quot;com.makaan.Test.SearchTest&quot;/&gt;
+      &lt;class name=&quot;com.makaan.Test.HomeTest&quot;/&gt;
+      &lt;class name=&quot;com.makaan.Test.SERPTest&quot;/&gt;
+      &lt;class name=&quot;com.makaan.Test.PYRTest&quot;/&gt;
+      &lt;class name=&quot;com.makaan.Test.ConnectNowTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Test (6 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(61);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'ValidateCardBuy')
+data.setCell(0, 2, 'com.makaan.Test.SERPTest')
+data.setCell(0, 3, 89147);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'ValidateCardRent')
+data.setCell(1, 2, 'com.makaan.Test.SERPTest')
+data.setCell(1, 3, 88318);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'ContactSeller')
+data.setCell(2, 2, 'com.makaan.Test.ConnectNowTest')
+data.setCell(2, 3, 62350);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'BuyFilters')
+data.setCell(3, 2, 'com.makaan.Test.SERPTest')
+data.setCell(3, 3, 54777);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'RentFilters')
+data.setCell(4, 2, 'com.makaan.Test.SERPTest')
+data.setCell(4, 3, 50411);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'ValidateSortingFilter')
+data.setCell(5, 2, 'com.makaan.Test.SERPTest')
+data.setCell(5, 3, 44020);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'CityDrawer')
+data.setCell(6, 2, 'com.makaan.Test.HomeTest')
+data.setCell(6, 3, 38481);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'ValidateSidecards')
+data.setCell(7, 2, 'com.makaan.Test.SERPTest')
+data.setCell(7, 3, 35880);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'ValidateBuilder')
+data.setCell(8, 2, 'com.makaan.Test.SearchTest')
+data.setCell(8, 3, 34670);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'ValidateSuburbBuy')
+data.setCell(9, 2, 'com.makaan.Test.SearchTest')
+data.setCell(9, 3, 34062);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'ValidateBuyLocalities')
+data.setCell(10, 2, 'com.makaan.Test.SearchTest')
+data.setCell(10, 3, 32116);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'ValidateRentLocalities')
+data.setCell(11, 2, 'com.makaan.Test.SearchTest')
+data.setCell(11, 3, 32001);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'ValidateDB')
+data.setCell(12, 2, 'com.makaan.Test.ConnectNowTest')
+data.setCell(12, 3, 31656);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'BuilderDrawer')
+data.setCell(13, 2, 'com.makaan.Test.HomeTest')
+data.setCell(13, 3, 31154);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'ValidateSponsoredLink')
+data.setCell(14, 2, 'com.makaan.Test.SERPTest')
+data.setCell(14, 3, 31151);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'ValidateSuburbRent')
+data.setCell(15, 2, 'com.makaan.Test.SearchTest')
+data.setCell(15, 3, 30159);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'ValidateBuyProject')
+data.setCell(16, 2, 'com.makaan.Test.SearchTest')
+data.setCell(16, 3, 29563);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'ValidateRentProject')
+data.setCell(17, 2, 'com.makaan.Test.SearchTest')
+data.setCell(17, 3, 26075);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'ValidateBuyLandmark')
+data.setCell(18, 2, 'com.makaan.Test.SearchTest')
+data.setCell(18, 3, 25323);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'ValidateProjectBuy')
+data.setCell(19, 2, 'com.makaan.Test.SERPTest')
+data.setCell(19, 3, 23374);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'ValidateRentLandmark')
+data.setCell(20, 2, 'com.makaan.Test.SearchTest')
+data.setCell(20, 3, 23252);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'Validatepagination')
+data.setCell(21, 2, 'com.makaan.Test.SERPTest')
+data.setCell(21, 3, 16532);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'ValidateSpotlightProject')
+data.setCell(22, 2, 'com.makaan.Test.HomeTest')
+data.setCell(22, 3, 16256);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'ValidateShortlistBuy')
+data.setCell(23, 2, 'com.makaan.Test.SERPTest')
+data.setCell(23, 3, 12764);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'MakaanIQDrawer')
+data.setCell(24, 2, 'com.makaan.Test.HomeTest')
+data.setCell(24, 3, 12383);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'ValidatePropertyRent')
+data.setCell(25, 2, 'com.makaan.Test.SERPTest')
+data.setCell(25, 3, 12278);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'ValidateMakaanLogin')
+data.setCell(26, 2, 'com.makaan.Test.LoginTest')
+data.setCell(26, 3, 11280);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'ValidateReadMorerent')
+data.setCell(27, 2, 'com.makaan.Test.SERPTest')
+data.setCell(27, 3, 11172);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'ValidateShortlistrent')
+data.setCell(28, 2, 'com.makaan.Test.SERPTest')
+data.setCell(28, 3, 10603);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'ValidateForgotPassword')
+data.setCell(29, 2, 'com.makaan.Test.LoginTest')
+data.setCell(29, 3, 10404);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'ValidateViewMoreBuy')
+data.setCell(30, 2, 'com.makaan.Test.SERPTest')
+data.setCell(30, 3, 9343);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'AppDrawer')
+data.setCell(31, 2, 'com.makaan.Test.HomeTest')
+data.setCell(31, 3, 9058);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'ValidateReadMoreBuy')
+data.setCell(32, 2, 'com.makaan.Test.SERPTest')
+data.setCell(32, 3, 8885);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'ValidateDownloadAppButton')
+data.setCell(33, 2, 'com.makaan.Test.HomeTest')
+data.setCell(33, 3, 8061);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'ValidateFindJoy')
+data.setCell(34, 2, 'com.makaan.Test.HomeTest')
+data.setCell(34, 3, 8015);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'ValidateCashBackCard')
+data.setCell(35, 2, 'com.makaan.Test.HomeTest')
+data.setCell(35, 3, 7289);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'ValidateViewMoreRent')
+data.setCell(36, 2, 'com.makaan.Test.SERPTest')
+data.setCell(36, 3, 6979);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'VerifyAppSection')
+data.setCell(37, 2, 'com.makaan.Test.HomeTest')
+data.setCell(37, 3, 6699);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'ValidateResetPassword')
+data.setCell(38, 2, 'com.makaan.Test.LoginTest')
+data.setCell(38, 3, 6678);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'ValidateSellerBuy')
+data.setCell(39, 2, 'com.makaan.Test.SERPTest')
+data.setCell(39, 3, 6115);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'ValidateLocalityRent')
+data.setCell(40, 2, 'com.makaan.Test.SERPTest')
+data.setCell(40, 3, 6113);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'Signup')
+data.setCell(41, 2, 'com.makaan.Test.LoginTest')
+data.setCell(41, 3, 5821);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'ValidateLocalityBuy')
+data.setCell(42, 2, 'com.makaan.Test.SERPTest')
+data.setCell(42, 3, 5655);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'ValidateSellerRent')
+data.setCell(43, 2, 'com.makaan.Test.SERPTest')
+data.setCell(43, 3, 4872);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'ValidateMapListToggle')
+data.setCell(44, 2, 'com.makaan.Test.SERPTest')
+data.setCell(44, 3, 4645);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'ValidatePYRBuy')
+data.setCell(45, 2, 'com.makaan.Test.PYRTest')
+data.setCell(45, 3, 4327);
+data.setCell(46, 0, 46)
+data.setCell(46, 1, 'ValidateBuyerJourney')
+data.setCell(46, 2, 'com.makaan.Test.HomeTest')
+data.setCell(46, 3, 4322);
+data.setCell(47, 0, 47)
+data.setCell(47, 1, 'ListProperty')
+data.setCell(47, 2, 'com.makaan.Test.HomeTest')
+data.setCell(47, 3, 4149);
+data.setCell(48, 0, 48)
+data.setCell(48, 1, 'ValidateSearchPlaceHolder')
+data.setCell(48, 2, 'com.makaan.Test.HomeTest')
+data.setCell(48, 3, 3567);
+data.setCell(49, 0, 49)
+data.setCell(49, 1, 'ValidateMakaanLogout')
+data.setCell(49, 2, 'com.makaan.Test.LoginTest')
+data.setCell(49, 3, 3365);
+data.setCell(50, 0, 50)
+data.setCell(50, 1, 'ValidateMplusCard')
+data.setCell(50, 2, 'com.makaan.Test.HomeTest')
+data.setCell(50, 3, 3093);
+data.setCell(51, 0, 51)
+data.setCell(51, 1, 'ValidateMchatCard')
+data.setCell(51, 2, 'com.makaan.Test.HomeTest')
+data.setCell(51, 3, 3072);
+data.setCell(52, 0, 52)
+data.setCell(52, 1, 'ValidateHighscoring')
+data.setCell(52, 2, 'com.makaan.Test.HomeTest')
+data.setCell(52, 3, 3065);
+data.setCell(53, 0, 53)
+data.setCell(53, 1, 'BuyerJourneyDrawer')
+data.setCell(53, 2, 'com.makaan.Test.HomeTest')
+data.setCell(53, 3, 2094);
+data.setCell(54, 0, 54)
+data.setCell(54, 1, 'CloseChat')
+data.setCell(54, 2, 'com.makaan.Test.HomeTest')
+data.setCell(54, 3, 1784);
+data.setCell(55, 0, 55)
+data.setCell(55, 1, 'ValidateSellerLink')
+data.setCell(55, 2, 'com.makaan.Test.HomeTest')
+data.setCell(55, 3, 1123);
+data.setCell(56, 0, 56)
+data.setCell(56, 1, 'ValidateSetAlert')
+data.setCell(56, 2, 'com.makaan.Test.SERPTest')
+data.setCell(56, 3, 778);
+data.setCell(57, 0, 57)
+data.setCell(57, 1, 'ConnectNow')
+data.setCell(57, 2, 'com.makaan.Test.ConnectNowTest')
+data.setCell(57, 3, 315);
+data.setCell(58, 0, 58)
+data.setCell(58, 1, 'ValidatePYRRent')
+data.setCell(58, 2, 'com.makaan.Test.PYRTest')
+data.setCell(58, 3, 76);
+data.setCell(59, 0, 59)
+data.setCell(59, 1, 'ValidateMainImage')
+data.setCell(59, 2, 'com.makaan.Test.HomeTest')
+data.setCell(59, 3, 67);
+data.setCell(60, 0, 60)
+data.setCell(60, 1, 'ValidateLoginButton')
+data.setCell(60, 2, 'com.makaan.Test.LoginTest')
+data.setCell(60, 3, 55);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 18 minutes</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">8 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.makaan.Test.SearchTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">ValidateSearchBox</span>
+                <br/>
+                <span class="ignored-method-name">ValidatePopularSuggestions</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.makaan.Test.ConnectNowTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">ViewNumberonSERP</span>
+                <br/>
+                <span class="ignored-method-name">ViewNumberInLead</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.makaan.Test.LoginTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">ValidateSocialLogin</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.makaan.Test.SERPTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">ValidatePropertyBuy</span>
+                <br/>
+                <span class="ignored-method-name">ValidateViewNumberForListedType</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.makaan.Test.HomeTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">BrokerDrawer</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.makaan.Test.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">InitiateDriver</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">ValidateLoginButton</span>
+                <span class="method-start">11562 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateForgotPassword</span>
+                <span class="method-start">11617 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateResetPassword</span>
+                <span class="method-start">22021 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateMakaanLogin</span>
+                <span class="method-start">28700 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateMakaanLogout</span>
+                <span class="method-start">39980 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Signup</span>
+                <span class="method-start">43345 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">Close</span>
+                <span class="method-start">49166 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.makaan.Test.SearchTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">InitiateDriver</span>
+                <span class="method-start">49407 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">ValidateBuyLocalities</span>
+                <span class="method-start">59034 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateRentLocalities</span>
+                <span class="method-start">91150 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateBuyProject</span>
+                <span class="method-start">123152 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateRentProject</span>
+                <span class="method-start">152716 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateBuilder</span>
+                <span class="method-start">178791 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ValidateBuyLandmark</span>
+                <span class="method-start">213461 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ValidateRentLandmark</span>
+                <span class="method-start">238785 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateSuburbBuy</span>
+                <span class="method-start">262037 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateSuburbRent</span>
+                <span class="method-start">296099 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">Close</span>
+                <span class="method-start">326259 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.makaan.Test.HomeTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">InitiateDriver</span>
+                <span class="method-start">326447 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">CloseChat</span>
+                <span class="method-start">333871 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateMainImage</span>
+                <span class="method-start">335655 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateDownloadAppButton</span>
+                <span class="method-start">335723 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateSellerLink</span>
+                <span class="method-start">343784 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateBuyerJourney</span>
+                <span class="method-start">344908 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">BuyerJourneyDrawer</span>
+                <span class="method-start">349230 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CityDrawer</span>
+                <span class="method-start">351324 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">BuilderDrawer</span>
+                <span class="method-start">389805 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">MakaanIQDrawer</span>
+                <span class="method-start">420959 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">AppDrawer</span>
+                <span class="method-start">433342 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ListProperty</span>
+                <span class="method-start">442400 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateSearchPlaceHolder</span>
+                <span class="method-start">446549 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateSpotlightProject</span>
+                <span class="method-start">450116 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateFindJoy</span>
+                <span class="method-start">466372 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateMchatCard</span>
+                <span class="method-start">474387 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateHighscoring</span>
+                <span class="method-start">477459 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateCashBackCard</span>
+                <span class="method-start">480524 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateMplusCard</span>
+                <span class="method-start">487813 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">VerifyAppSection</span>
+                <span class="method-start">490906 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">Close</span>
+                <span class="method-start">497606 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.makaan.Test.SERPTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">InitiateDriver</span>
+                <span class="method-start">497962 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">ValidateCardBuy</span>
+                <span class="method-start">507370 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateCardRent</span>
+                <span class="method-start">596517 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">BuyFilters</span>
+                <span class="method-start">684835 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">RentFilters</span>
+                <span class="method-start">739612 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidatePropertyRent</span>
+                <span class="method-start">790023 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateReadMoreBuy</span>
+                <span class="method-start">802301 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateReadMorerent</span>
+                <span class="method-start">811186 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateSellerBuy</span>
+                <span class="method-start">822358 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateSellerRent</span>
+                <span class="method-start">828473 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateLocalityBuy</span>
+                <span class="method-start">833346 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateLocalityRent</span>
+                <span class="method-start">839001 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateProjectBuy</span>
+                <span class="method-start">845115 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ValidateShortlistBuy</span>
+                <span class="method-start">868489 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateShortlistrent</span>
+                <span class="method-start">881253 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Validatepagination</span>
+                <span class="method-start">891856 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ValidateSidecards</span>
+                <span class="method-start">908388 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateMapListToggle</span>
+                <span class="method-start">944268 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateViewMoreBuy</span>
+                <span class="method-start">948913 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateViewMoreRent</span>
+                <span class="method-start">958256 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ValidateSponsoredLink</span>
+                <span class="method-start">965236 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ValidateSortingFilter</span>
+                <span class="method-start">996387 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ValidateSetAlert</span>
+                <span class="method-start">1040407 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">Close</span>
+                <span class="method-start">1041185 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.makaan.Test.PYRTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">InitiateDriver</span>
+                <span class="method-start">1041445 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ValidatePYRBuy</span>
+                <span class="method-start">1052692 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ValidatePYRRent</span>
+                <span class="method-start">1057019 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">Close</span>
+                <span class="method-start">1057096 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.makaan.Test.ConnectNowTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">InitiateDriver</span>
+                <span class="method-start">1057264 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ConnectNow</span>
+                <span class="method-start">1065857 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ValidateDB</span>
+                <span class="method-start">1066172 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ContactSeller</span>
+                <span class="method-start">1097828 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">Close</span>
+                <span class="method-start">1160178 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+	<classpathentry kind="lib" path="lib/java-mail-1.4.4.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.25.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="lib/poi-examples-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="lib/poi-excelant-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="lib/poi-scratchpad-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="lib/testng-6.8.jar" sourcepath="/Users/vikas/.m2/repository/org/testng/testng/6.8/testng-6.8-sources.jar"/>
+	<classpathentry kind="lib" path="/MobileWebAutomation/Jar/selenium-server-standalone-3.0.0-beta.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

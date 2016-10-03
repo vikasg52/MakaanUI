@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.makaan.Test.SearchTest">
+        <methods>
+          <include name="InitiateDriver"/>
+          <include name="ValidateRentLandmark"/>
+          <include name="ValidateBuyLandmark"/>
+          <include name="Close"/>
+        </methods>
+      </class> <!-- com.makaan.Test.SearchTest -->
+      <class name="com.makaan.Test.ConnectNowTest">
+        <methods>
+          <include name="Close"/>
+          <include name="ConnectNow"/>
+          <include name="ValidateDB"/>
+          <include name="ContactSeller"/>
+          <include name="InitiateDriver"/>
+        </methods>
+      </class> <!-- com.makaan.Test.ConnectNowTest -->
+      <class name="com.makaan.Test.LoginTest">
+        <methods>
+          <include name="InitiateDriver"/>
+          <include name="Close"/>
+        </methods>
+      </class> <!-- com.makaan.Test.LoginTest -->
+      <class name="com.makaan.Test.HomeTest">
+        <methods>
+          <include name="ListProperty"/>
+          <include name="InitiateDriver"/>
+          <include name="Close"/>
+        </methods>
+      </class> <!-- com.makaan.Test.HomeTest -->
+      <class name="com.makaan.Test.PYRTest">
+        <methods>
+          <include name="ValidatePYRBuy"/>
+          <include name="InitiateDriver"/>
+          <include name="Close"/>
+          <include name="ValidatePYRRent"/>
+        </methods>
+      </class> <!-- com.makaan.Test.PYRTest -->
+      <class name="com.makaan.Test.SERPTest">
+        <methods>
+          <include name="BuyFilters"/>
+          <include name="Close"/>
+          <include name="ValidateSidecards"/>
+          <include name="ValidateSortingFilter"/>
+          <include name="ValidateShortlistBuy"/>
+          <include name="ValidateSetAlert"/>
+          <include name="InitiateDriver"/>
+        </methods>
+      </class> <!-- com.makaan.Test.SERPTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

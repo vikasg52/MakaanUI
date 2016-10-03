@@ -1,0 +1,1035 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>48/13/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Aug 12 16:10:18 IST 2016</td>
+</tr>
+<tr><td>Total time:</td><td>1160 seconds (1160378 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.BuyFilters()'><b>BuyFilters</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td><div><pre>java.lang.AssertionError: Fail: Property Counts are not matching for removing set Budget filter39,065 39,079 expected [true] but found [false]
+	at com.makaan.Test.SERPTest.BuyFilters(SERPTest.java:45)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1088239991", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1088239991'><pre>java.lang.AssertionError: Fail: Property Counts are not matching for removing set Budget filter39,065 39,079 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.makaan.Test.SERPTest.BuyFilters(SERPTest.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+</pre></div></td>
+<td>54</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.ConnectNowTest.ConnectNow()'><b>ConnectNow</b><br>Test class: com.makaan.Test.ConnectNowTest</td>
+<td><div><pre>java.lang.AssertionError: Fail: Lead popup did not open expected [true] but found [false]
+	at com.makaan.Test.ConnectNowTest.ConnectNow(ConnectNowTest.java:45)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1372137902", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1372137902'><pre>java.lang.AssertionError: Fail: Lead popup did not open expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.makaan.Test.ConnectNowTest.ConnectNow(ConnectNowTest.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+</pre></div></td>
+<td>0</td>
+<td>com.makaan.Test.ConnectNowTest@f4168b8</td></tr>
+<tr>
+<td title='com.makaan.Test.ConnectNowTest.ContactSeller()'><b>ContactSeller</b><br>Test class: com.makaan.Test.ConnectNowTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//div[@data-module=&apos;topSellerPyr&apos;] (tried for 60 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.sivT4F}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 42b2a5df46f1c5a078be3c4161813443
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
+	at com.makaan.Webhelper.Webhelper.WaitUntillVisiblility(Webhelper.java:74)
+	at com.makaan.Middleware.ConnectNowMiddleware.ContactSellers(ConnectNowMiddleware.java:372)
+	at com.makaan.Test.ConnectNowTest.ContactSeller(ConnectNowTest.java:128)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace953528583", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace953528583'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//div[@data-module=&apos;topSellerPyr&apos;] (tried for 60 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.sivT4F}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 42b2a5df46f1c5a078be3c4161813443
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
+	at com.makaan.Webhelper.Webhelper.WaitUntillVisiblility(Webhelper.java:74)
+	at com.makaan.Middleware.ConnectNowMiddleware.ContactSellers(ConnectNowMiddleware.java:372)
+	at com.makaan.Test.ConnectNowTest.ContactSeller(ConnectNowTest.java:128)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+</pre></div></td>
+<td>62</td>
+<td>com.makaan.Test.ConnectNowTest@f4168b8</td></tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.ListProperty()'><b>ListProperty</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (1481, 352)
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 48 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.AaMMet}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: f8b8ca32dc97061a7dd97a91d92999f6
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Middleware.HomeMiddleware.SwitchWindow(HomeMiddleware.java:629)
+	at com.makaan.Middleware.HomeMiddleware.VerifyListYourProperty(HomeMiddleware.java:552)
+	at com.makaan.Test.HomeTest.ListProperty(HomeTest.java:256)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace142099757", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace142099757'><pre>org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (1481, 352)
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 48 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.AaMMet}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: f8b8ca32dc97061a7dd97a91d92999f6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Middleware.HomeMiddleware.SwitchWindow(HomeMiddleware.java:629)
+	at com.makaan.Middleware.HomeMiddleware.VerifyListYourProperty(HomeMiddleware.java:552)
+	at com.makaan.Test.HomeTest.ListProperty(HomeTest.java:256)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+</pre></div></td>
+<td>4</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+<tr>
+<td title='com.makaan.Test.SearchTest.ValidateBuyLandmark()'><b>ValidateBuyLandmark</b><br>Test class: com.makaan.Test.SearchTest</td>
+<td><div><pre>java.lang.AssertionError: Fail: All Landmark Tested for Buy Tab are not successfullFail: Not able to verify Property Type with suggestion kashmere gate,delhi expected [true] but found [false]
+	at com.makaan.Test.SearchTest.ValidateBuyLandmark(SearchTest.java:176)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace835773569", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace835773569'><pre>java.lang.AssertionError: Fail: All Landmark Tested for Buy Tab are not successfullFail: Not able to verify Property Type with suggestion kashmere gate,delhi expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.makaan.Test.SearchTest.ValidateBuyLandmark(SearchTest.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+</pre></div></td>
+<td>25</td>
+<td>com.makaan.Test.SearchTest@3d8314f0</td></tr>
+<tr>
+<td title='com.makaan.Test.ConnectNowTest.ValidateDB()'><b>ValidateDB</b><br>Test class: com.makaan.Test.ConnectNowTest</td>
+<td><div><pre>java.lang.AssertionError: Fail: Lead Drop was not successfull as Db did not get updated expected [true] but found [false]
+	at com.makaan.Test.ConnectNowTest.ValidateDB(ConnectNowTest.java:66)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace465909321", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace465909321'><pre>java.lang.AssertionError: Fail: Lead Drop was not successfull as Db did not get updated expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.makaan.Test.ConnectNowTest.ValidateDB(ConnectNowTest.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+</pre></div></td>
+<td>31</td>
+<td>com.makaan.Test.ConnectNowTest@f4168b8</td></tr>
+<tr>
+<td title='com.makaan.Test.PYRTest.ValidatePYRBuy()'><b>ValidatePYRBuy</b><br>Test class: com.makaan.Test.PYRTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (683, 335). Other element would receive the click: &lt;div class=&quot;requirement-box clearfix property moveup js-focus&quot; data-type=&quot;property-type-placeholder&quot; style=&quot;z-index: 2;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 78 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.TVqeXk}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0968aa1719f2b9c44d75b5af93d7ded4
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Webhelper.Webhelper.ClickbyXpath(Webhelper.java:124)
+	at com.makaan.Middleware.PYRMiddleware.PYRRequirement(PYRMiddleware.java:229)
+	at com.makaan.Middleware.PYRMiddleware.PYRBuy(PYRMiddleware.java:63)
+	at com.makaan.Test.PYRTest.ValidatePYRBuy(PYRTest.java:41)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace596333086", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace596333086'><pre>org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (683, 335). Other element would receive the click: &lt;div class=&quot;requirement-box clearfix property moveup js-focus&quot; data-type=&quot;property-type-placeholder&quot; style=&quot;z-index: 2;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 78 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.TVqeXk}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0968aa1719f2b9c44d75b5af93d7ded4
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Webhelper.Webhelper.ClickbyXpath(Webhelper.java:124)
+	at com.makaan.Middleware.PYRMiddleware.PYRRequirement(PYRMiddleware.java:229)
+	at com.makaan.Middleware.PYRMiddleware.PYRBuy(PYRMiddleware.java:63)
+	at com.makaan.Test.PYRTest.ValidatePYRBuy(PYRTest.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+</pre></div></td>
+<td>4</td>
+<td>com.makaan.Test.PYRTest@2a40cd94</td></tr>
+<tr>
+<td title='com.makaan.Test.PYRTest.ValidatePYRRent()'><b>ValidatePYRRent</b><br>Test class: com.makaan.Test.PYRTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (1048, 584). Other element would receive the click: &lt;div data-type=&quot;pyr-overlay&quot; class=&quot;thoverlay&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 39 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.TVqeXk}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0968aa1719f2b9c44d75b5af93d7ded4
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Webhelper.Webhelper.ClickbyXpath(Webhelper.java:124)
+	at com.makaan.Middleware.PYRMiddleware.PYRRequirement(PYRMiddleware.java:208)
+	at com.makaan.Middleware.PYRMiddleware.PYRRent(PYRMiddleware.java:78)
+	at com.makaan.Test.PYRTest.ValidatePYRRent(PYRTest.java:63)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace560465923", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace560465923'><pre>org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (1048, 584). Other element would receive the click: &lt;div data-type=&quot;pyr-overlay&quot; class=&quot;thoverlay&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 39 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.TVqeXk}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0968aa1719f2b9c44d75b5af93d7ded4
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Webhelper.Webhelper.ClickbyXpath(Webhelper.java:124)
+	at com.makaan.Middleware.PYRMiddleware.PYRRequirement(PYRMiddleware.java:208)
+	at com.makaan.Middleware.PYRMiddleware.PYRRent(PYRMiddleware.java:78)
+	at com.makaan.Test.PYRTest.ValidatePYRRent(PYRTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+</pre></div></td>
+<td>0</td>
+<td>com.makaan.Test.PYRTest@2a40cd94</td></tr>
+<tr>
+<td title='com.makaan.Test.SearchTest.ValidateRentLandmark()'><b>ValidateRentLandmark</b><br>Test class: com.makaan.Test.SearchTest</td>
+<td><div><pre>java.lang.AssertionError: Fail: All Landmark Tested for Rent Tab are not successfull expected [true] but found [false]
+	at com.makaan.Test.SearchTest.ValidateRentLandmark(SearchTest.java:196)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1713568869", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1713568869'><pre>java.lang.AssertionError: Fail: All Landmark Tested for Rent Tab are not successfull expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.makaan.Test.SearchTest.ValidateRentLandmark(SearchTest.java:196)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+</pre></div></td>
+<td>23</td>
+<td>com.makaan.Test.SearchTest@3d8314f0</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidateSetAlert()'><b>ValidateSetAlert</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (850, 16). Other element would receive the click: &lt;html lang=&quot;en&quot;&gt;...&lt;/html&gt;
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 191 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.Lbu6LX}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6ddea751d3ba69d173667bde2abccfe6
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Webhelper.Webhelper.ClickbyXpath(Webhelper.java:124)
+	at com.makaan.Middleware.SERPMiddleware.SetAlert(SERPMiddleware.java:687)
+	at com.makaan.Test.SERPTest.ValidateSetAlert(SERPTest.java:498)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace205615258", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace205615258'><pre>org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (850, 16). Other element would receive the click: &lt;html lang=&quot;en&quot;&gt;...&lt;/html&gt;
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 191 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.Lbu6LX}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6ddea751d3ba69d173667bde2abccfe6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Webhelper.Webhelper.ClickbyXpath(Webhelper.java:124)
+	at com.makaan.Middleware.SERPMiddleware.SetAlert(SERPMiddleware.java:687)
+	at com.makaan.Test.SERPTest.ValidateSetAlert(SERPTest.java:498)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+</pre></div></td>
+<td>0</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidateShortlistBuy()'><b>ValidateShortlistBuy</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (869, 10). Other element would receive the click: &lt;ul class=&quot;step1 pull-right clearfix&quot;&gt;...&lt;/ul&gt;
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 34 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.Lbu6LX}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6ddea751d3ba69d173667bde2abccfe6
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Webhelper.Webhelper.ClickbyXpath(Webhelper.java:124)
+	at com.makaan.Middleware.SERPMiddleware.VerifyShortList(SERPMiddleware.java:672)
+	at com.makaan.Test.SERPTest.ValidateShortlistBuy(SERPTest.java:304)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1029898472", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1029898472'><pre>org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (869, 10). Other element would receive the click: &lt;ul class=&quot;step1 pull-right clearfix&quot;&gt;...&lt;/ul&gt;
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 34 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.Lbu6LX}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6ddea751d3ba69d173667bde2abccfe6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Webhelper.Webhelper.ClickbyXpath(Webhelper.java:124)
+	at com.makaan.Middleware.SERPMiddleware.VerifyShortList(SERPMiddleware.java:672)
+	at com.makaan.Test.SERPTest.ValidateShortlistBuy(SERPTest.java:304)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+</pre></div></td>
+<td>12</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidateSidecards()'><b>ValidateSidecards</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (1095, 383). Other element would receive the click: &lt;div class=&quot;message-wrapper them&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 27 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.Lbu6LX}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6ddea751d3ba69d173667bde2abccfe6
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Webhelper.Webhelper.ClickbyXpath(Webhelper.java:124)
+	at com.makaan.Middleware.SERPMiddleware.VerifyLocalityCard(SERPMiddleware.java:825)
+	at com.makaan.Middleware.SERPMiddleware.SideCards(SERPMiddleware.java:804)
+	at com.makaan.Test.SERPTest.ValidateSidecards(SERPTest.java:362)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace537536188", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace537536188'><pre>org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (1095, 383). Other element would receive the click: &lt;div class=&quot;message-wrapper them&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 27 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.Lbu6LX}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6ddea751d3ba69d173667bde2abccfe6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Webhelper.Webhelper.ClickbyXpath(Webhelper.java:124)
+	at com.makaan.Middleware.SERPMiddleware.VerifyLocalityCard(SERPMiddleware.java:825)
+	at com.makaan.Middleware.SERPMiddleware.SideCards(SERPMiddleware.java:804)
+	at com.makaan.Test.SERPTest.ValidateSidecards(SERPTest.java:362)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+</pre></div></td>
+<td>35</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidateSortingFilter()'><b>ValidateSortingFilter</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (1115, 7). Other element would receive the click: &lt;ul class=&quot;step1 pull-right clearfix&quot;&gt;...&lt;/ul&gt;
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 38 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.Lbu6LX}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6ddea751d3ba69d173667bde2abccfe6
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Webhelper.Webhelper.ClickbyXpath(Webhelper.java:124)
+	at com.makaan.Middleware.SERPMiddleware.filterbySellerRating(SERPMiddleware.java:1044)
+	at com.makaan.Middleware.SERPMiddleware.SortingFilter(SERPMiddleware.java:1084)
+	at com.makaan.Test.SERPTest.ValidateSortingFilter(SERPTest.java:460)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1318475957", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1318475957'><pre>org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (1115, 7). Other element would receive the click: &lt;ul class=&quot;step1 pull-right clearfix&quot;&gt;...&lt;/ul&gt;
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.9.248304,platform=Linux 3.19.0-25-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 38 milliseconds
+Build info: version: &apos;3.0.0-beta2&apos;, revision: &apos;2aa21c1&apos;, time: &apos;2016-08-02 15:03:28 -0700&apos;
+System info: host: &apos;AT-LP-1036&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.19.0-25-generic&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=/tmp/.com.google.Chrome.Lbu6LX}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=47.0.2526.111, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6ddea751d3ba69d173667bde2abccfe6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:319)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.makaan.Webhelper.Webhelper.ClickbyXpath(Webhelper.java:124)
+	at com.makaan.Middleware.SERPMiddleware.filterbySellerRating(SERPMiddleware.java:1044)
+	at com.makaan.Middleware.SERPMiddleware.SortingFilter(SERPMiddleware.java:1084)
+	at com.makaan.Test.SERPTest.ValidateSortingFilter(SERPTest.java:460)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+</pre></div></td>
+<td>44</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.AppDrawer()'><b>AppDrawer</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td></td>
+<td>9</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.BuilderDrawer()'><b>BuilderDrawer</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td></td>
+<td>31</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.BuyerJourneyDrawer()'><b>BuyerJourneyDrawer</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td></td>
+<td>2</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.CityDrawer()'><b>CityDrawer</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td></td>
+<td>38</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.CloseChat()'><b>CloseChat</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td></td>
+<td>1</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.MakaanIQDrawer()'><b>MakaanIQDrawer</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td></td>
+<td>12</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.RentFilters()'><b>RentFilters</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td></td>
+<td>50</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.LoginTest.Signup()'><b>Signup</b><br>Test class: com.makaan.Test.LoginTest</td>
+<td></td>
+<td>5</td>
+<td>com.makaan.Test.LoginTest@2bea5ab4</td></tr>
+<tr>
+<td title='com.makaan.Test.SearchTest.ValidateBuilder()'><b>ValidateBuilder</b><br>Test class: com.makaan.Test.SearchTest</td>
+<td></td>
+<td>34</td>
+<td>com.makaan.Test.SearchTest@3d8314f0</td></tr>
+<tr>
+<td title='com.makaan.Test.SearchTest.ValidateBuyLocalities()'><b>ValidateBuyLocalities</b><br>Test class: com.makaan.Test.SearchTest</td>
+<td></td>
+<td>32</td>
+<td>com.makaan.Test.SearchTest@3d8314f0</td></tr>
+<tr>
+<td title='com.makaan.Test.SearchTest.ValidateBuyProject()'><b>ValidateBuyProject</b><br>Test class: com.makaan.Test.SearchTest</td>
+<td></td>
+<td>29</td>
+<td>com.makaan.Test.SearchTest@3d8314f0</td></tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.ValidateBuyerJourney()'><b>ValidateBuyerJourney</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td></td>
+<td>4</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidateCardBuy()'><b>ValidateCardBuy</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td></td>
+<td>89</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidateCardRent()'><b>ValidateCardRent</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td></td>
+<td>88</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.ValidateCashBackCard()'><b>ValidateCashBackCard</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td></td>
+<td>7</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.ValidateDownloadAppButton()'><b>ValidateDownloadAppButton</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td></td>
+<td>8</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.ValidateFindJoy()'><b>ValidateFindJoy</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td></td>
+<td>8</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+<tr>
+<td title='com.makaan.Test.LoginTest.ValidateForgotPassword()'><b>ValidateForgotPassword</b><br>Test class: com.makaan.Test.LoginTest</td>
+<td></td>
+<td>10</td>
+<td>com.makaan.Test.LoginTest@2bea5ab4</td></tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.ValidateHighscoring()'><b>ValidateHighscoring</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td></td>
+<td>3</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidateLocalityBuy()'><b>ValidateLocalityBuy</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td></td>
+<td>5</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidateLocalityRent()'><b>ValidateLocalityRent</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td></td>
+<td>6</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.LoginTest.ValidateLoginButton()'><b>ValidateLoginButton</b><br>Test class: com.makaan.Test.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>com.makaan.Test.LoginTest@2bea5ab4</td></tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.ValidateMainImage()'><b>ValidateMainImage</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td></td>
+<td>0</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+<tr>
+<td title='com.makaan.Test.LoginTest.ValidateMakaanLogin()'><b>ValidateMakaanLogin</b><br>Test class: com.makaan.Test.LoginTest</td>
+<td></td>
+<td>11</td>
+<td>com.makaan.Test.LoginTest@2bea5ab4</td></tr>
+<tr>
+<td title='com.makaan.Test.LoginTest.ValidateMakaanLogout()'><b>ValidateMakaanLogout</b><br>Test class: com.makaan.Test.LoginTest</td>
+<td></td>
+<td>3</td>
+<td>com.makaan.Test.LoginTest@2bea5ab4</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidateMapListToggle()'><b>ValidateMapListToggle</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td></td>
+<td>4</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.ValidateMchatCard()'><b>ValidateMchatCard</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td></td>
+<td>3</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.ValidateMplusCard()'><b>ValidateMplusCard</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td></td>
+<td>3</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidateProjectBuy()'><b>ValidateProjectBuy</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td></td>
+<td>23</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidatePropertyRent()'><b>ValidatePropertyRent</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td></td>
+<td>12</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidateReadMoreBuy()'><b>ValidateReadMoreBuy</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td></td>
+<td>8</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidateReadMorerent()'><b>ValidateReadMorerent</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td></td>
+<td>11</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.SearchTest.ValidateRentLocalities()'><b>ValidateRentLocalities</b><br>Test class: com.makaan.Test.SearchTest</td>
+<td></td>
+<td>32</td>
+<td>com.makaan.Test.SearchTest@3d8314f0</td></tr>
+<tr>
+<td title='com.makaan.Test.SearchTest.ValidateRentProject()'><b>ValidateRentProject</b><br>Test class: com.makaan.Test.SearchTest</td>
+<td></td>
+<td>26</td>
+<td>com.makaan.Test.SearchTest@3d8314f0</td></tr>
+<tr>
+<td title='com.makaan.Test.LoginTest.ValidateResetPassword()'><b>ValidateResetPassword</b><br>Test class: com.makaan.Test.LoginTest</td>
+<td></td>
+<td>6</td>
+<td>com.makaan.Test.LoginTest@2bea5ab4</td></tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.ValidateSearchPlaceHolder()'><b>ValidateSearchPlaceHolder</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td></td>
+<td>3</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidateSellerBuy()'><b>ValidateSellerBuy</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td></td>
+<td>6</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.ValidateSellerLink()'><b>ValidateSellerLink</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td></td>
+<td>1</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidateSellerRent()'><b>ValidateSellerRent</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td></td>
+<td>4</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidateShortlistrent()'><b>ValidateShortlistrent</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td></td>
+<td>10</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidateSponsoredLink()'><b>ValidateSponsoredLink</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td></td>
+<td>31</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.ValidateSpotlightProject()'><b>ValidateSpotlightProject</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td></td>
+<td>16</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+<tr>
+<td title='com.makaan.Test.SearchTest.ValidateSuburbBuy()'><b>ValidateSuburbBuy</b><br>Test class: com.makaan.Test.SearchTest</td>
+<td></td>
+<td>34</td>
+<td>com.makaan.Test.SearchTest@3d8314f0</td></tr>
+<tr>
+<td title='com.makaan.Test.SearchTest.ValidateSuburbRent()'><b>ValidateSuburbRent</b><br>Test class: com.makaan.Test.SearchTest</td>
+<td></td>
+<td>30</td>
+<td>com.makaan.Test.SearchTest@3d8314f0</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidateViewMoreBuy()'><b>ValidateViewMoreBuy</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td></td>
+<td>9</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.ValidateViewMoreRent()'><b>ValidateViewMoreRent</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td></td>
+<td>6</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.SERPTest.Validatepagination()'><b>Validatepagination</b><br>Test class: com.makaan.Test.SERPTest</td>
+<td></td>
+<td>16</td>
+<td>com.makaan.Test.SERPTest@530612ba</td></tr>
+<tr>
+<td title='com.makaan.Test.HomeTest.VerifyAppSection()'><b>VerifyAppSection</b><br>Test class: com.makaan.Test.HomeTest</td>
+<td></td>
+<td>6</td>
+<td>com.makaan.Test.HomeTest@2df32bf7</td></tr>
+</table><p>
+</body>
+</html>
