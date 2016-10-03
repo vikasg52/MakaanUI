@@ -4,7 +4,7 @@ package com.makaan.Dictionary;
 
 public class HeaderFooter {
 
-public static String Footer = "//footer[@id='seofooter-wrap']";
+public static String Footer = "//footer[@class='footer-warp']";
 
 public static String AboutMakaan= "//div[@data-module='footer']/div[1]";
 public static String PropertiesinIndia= "//div[@data-module='footer']/div[2]";

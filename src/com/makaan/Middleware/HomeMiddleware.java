@@ -350,9 +350,11 @@ public class HomeMiddleware {
 		System.out.println("Inside test Verify Menu Drawer BuyerJourney Link");
 		Thread.sleep(1000);
 			System.out.println("Menu Drawer is present");
+			closechat();
 			wb.ClickbyXpath(dict.MenuDrawer);
 			if (wb.IsElementPresent(dict.MenuDrawerJourney)) {
 				System.out.println("Buyer Journey in drawer is present");
+				wb.ClickbyXpath(dict.MenuDrawer);
 				result = NewTab(dict.MenuDrawerJourney, dict.ValidateBuyerJourney, "journey");
 				if (result.contains("Pass")) {
 					System.out.println("Buyer Journey button was verified in menu drawer");
@@ -360,7 +362,7 @@ public class HomeMiddleware {
 					return ("Fail: " + result);
 				}
 		}
-		return ("Pass: Buyer Journey in Meny Drwer is verified successfully");
+		return ("Pass: Buyer Journey in Menu Drawer is verified successfully");
 	}
 
 	public String VerifyMenuDrawerCities() throws NoSuchElementException, IOException, TimeoutException, InterruptedException {
@@ -496,6 +498,7 @@ public class HomeMiddleware {
 					count++;
 				}
 				Thread.sleep(2000);
+				wb.getDriver().navigate().back();
 				wb.ClickbyXpath(dict.MenuDrawer);
 				// Thread.sleep(1000);
 				wb.ClickbyXpath(dict.TopBrokers);
@@ -523,9 +526,9 @@ public class HomeMiddleware {
 		System.out.println("Valiadting Makaan IQ in Drawer");
 		wb.PageRefresh();
 		Thread.sleep(2000);
+		closechat();
 		wb.ClickbyXpath(dict.MenuDrawer);
 		wb.WaitUntill(dict.MakaanIQ);
-		closechat();
 		if (wb.IsElementPresent(dict.MakaanIQ)) {
 			System.out.println("MakaanIQ in drawer is present");
 			result = SwitchWindow(dict.MakaanIQ, dict.VerifyMakaanIQ, "iq");
@@ -598,7 +601,7 @@ public class HomeMiddleware {
 		try {
 			if (wb.IsElementPresentById("inner-wrapper")) {
 				// wb.ClickbyXpath(".//textarea[@id='input']");
-				wb.ClickbyXpath(".//div[@class='cross']");
+				wb.ClickbyXpath("//div[@class='cross']");
 				System.out.println("Closed mchat popup");
 			}
 		} catch (Exception e) {
