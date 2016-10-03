@@ -13,9 +13,9 @@ public class Home {
 
 	public static String Buyerjourney = ".//div[@class='profile-pic']//a";
 
-	public static String ValidateBuyerJourney = ".//div[@class='d-dashboard-wrap']//ul";
+	public static String ValidateBuyerJourney = "/a[@data-type='track-my-journey']//span[@class='initial']";
 
-	public static String MenuDrawer = ".//div[@class='login-wrap clearfix']//ul[@class='hamburger-icon']";
+	public static String MenuDrawer = "//div[@class='login-wrap clearfix']//ul[@class='hamburger-icon']";
 
 	public static String MenuDrawerJourney = ".//a[@data-track-action='Click_Drawer_DASHBOARD']";
 
@@ -33,7 +33,7 @@ public class Home {
 
 	public static String AllBrokers = ".//a[@data-track-label='allBrokers']";
 
-	public static String MakaanIQ = ".//a[@data-track-action='CLICK_MakaanIQ']";
+	public static String MakaanIQ = "//a[@data-type='makaaniq']";
 
 	public static String MenuDrawerApp = ".//a[@data-track-label='Buyer_DownloadApp']";
 
@@ -61,9 +61,9 @@ public class Home {
 
 	public static String BuilderCover = ".//div[@class='bbcard']/div[1]";
 
-	public static String allBrokers = ".//ul[@class='broker-list clearfix']";
+	public static String allBrokers = "//div[@class='all-broker-list clearfix']";
 
-	public static String BrokerCover = ".//section[@id='coverpic']";
+	public static String BrokerCover = "//div[@class='bb-logo-wrap']";
 
 	public static String VerifyMakaanIQ = ".//img[@title='makaan iQ']";
 

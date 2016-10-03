@@ -567,7 +567,7 @@ public class HomeMiddleware {
 	public String VerifyListYourProperty()
 			throws NoSuchElementException, IOException, TimeoutException, InterruptedException {
 		System.out.println("Valiadting  List your Prperty in Drawer");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		wb.ClickbyXpath(dict.MenuDrawer);
 		wb.WaitUntillVisiblility(dict.ListYourProerty);
 		closechat();
