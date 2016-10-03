@@ -13,7 +13,7 @@ public class Home {
 
 	public static String Buyerjourney = ".//div[@class='profile-pic']//a";
 
-	public static String ValidateBuyerJourney = "//a[@data-type='track-my-journey']//span[@class='initial']";
+	public static String ValidateBuyerJourney = "//a[@data-type='track-my-journey']//span[@class='avatar']";
 
 	public static String MenuDrawer = "//div[@class='login-wrap clearfix']//ul[@class='hamburger-icon']";
 

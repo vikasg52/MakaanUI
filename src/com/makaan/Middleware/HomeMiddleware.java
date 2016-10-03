@@ -498,9 +498,9 @@ public class HomeMiddleware {
 					count++;
 				}
 				Thread.sleep(2000);
-				wb.getDriver().navigate().back();
+				//wb.getDriver().navigate().back();
 				wb.ClickbyXpath(dict.MenuDrawer);
-				// Thread.sleep(1000);
+				Thread.sleep(2000);
 				wb.ClickbyXpath(dict.TopBrokers);
 			}
 			result = NewTab("(//a[@data-track-action='CLICK_Top Brokers'])", dict.allBrokers,"all");
