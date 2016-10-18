@@ -3,9 +3,8 @@
 <suite name="Suite">
 	<test name="Test">
 		<classes>
-			
-			<class name="com.makaan.Test.LoginTest" />
 			<class name="com.makaan.Test.HomeTest" />
+			<class name="com.makaan.Test.LoginTest" />
 			<class name="com.makaan.Test.ConnectNowTest" />
 			<class name="com.makaan.Test.SearchTest" />
 			<class name="com.makaan.Test.SERPTest" />
