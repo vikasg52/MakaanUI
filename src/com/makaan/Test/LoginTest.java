@@ -35,7 +35,7 @@ public class LoginTest {
 
 	}
 
-	@Test(priority = 1)
+	@Test(priority=0)
 	public void ValidateLoginButton() {
 		System.out.println("Inside Test Validate Login Button");
 		
@@ -53,8 +53,7 @@ public class LoginTest {
 		}
 	}
 
-	@Test(priority = 2)
-	 //@Test (enabled = false)
+	@Test(priority=1)
 	public void ValidateSocialLogin() throws InterruptedException {
 		System.out.println("Inside Test Validate Social Login");
 		try {
@@ -73,7 +72,7 @@ public class LoginTest {
 		}
 	}
 
-	@Test(priority = 3)
+	@Test(priority=2)
 	 //@Test (enabled = false)
 	public void ValidateForgotPassword() throws InterruptedException {
 		System.out.println("Inside Test Forgot password");
@@ -93,7 +92,7 @@ public class LoginTest {
 		}
 	}
 
-		@Test(priority = 4)
+		@Test(priority=3)
 	 //@Test (enabled = false)
 	public void ValidateResetPassword() throws InterruptedException {
 		System.out.println("Inside Test Reset password");
@@ -113,7 +112,7 @@ public class LoginTest {
 		}
 	}
 
-	@Test(priority = 5)
+	@Test(priority=4)
 	 //@Test (enabled = false)
 	public void ValidateMakaanLogin() throws InterruptedException {
 		System.out.println("Inside Test Validate Makaan Login");
@@ -132,7 +131,7 @@ public class LoginTest {
 		}
 	}
 
-	@Test(priority = 6)
+	@Test(priority=5)
 	// @Test (enabled = false)
 	public void ValidateMakaanLogout() throws InterruptedException {
 		System.out.println("Inside Test Validate Makaan Logout");
@@ -149,7 +148,7 @@ public class LoginTest {
 		}
 	}
 
-	@Test(priority = 7)
+	@Test(priority=6)
 	// @Test (enabled = false)
 	public void Signup() throws InterruptedException {
 		System.out.println("Inside Test Validate Makaan Signup");
@@ -158,7 +157,7 @@ public class LoginTest {
 				System.out.println("Verified Signup Functionality");
 
 			} else {
-				Assert.assertTrue(false, "not able to validate MakaanSignup form");
+				Assert.assertTrue(false, "not able to validate MakaanSignup form:");
 			}
 		} catch (NoSuchElementException n) {
 			Assert.assertTrue(false, "not able to verify Signup due to element not found on Page" +n);

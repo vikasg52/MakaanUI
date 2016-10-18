@@ -7,7 +7,7 @@ public static String MakaanLogo = "//a[@title='get your home at makaan']";
 	public static String PYRForm = ".//div[@id='pyr-container']";
 	
 	
-	public static String PYRLink =".//span[contains(text(),'share your requirements')]";
+	public static String PYRLink ="//div[@class='sbc-link']//span[@class='pink link']";
 	
 	public static String rentTab = ".//li[@data-value='rent']";
 	
@@ -25,9 +25,9 @@ public static String MakaanLogo = "//a[@title='get your home at makaan']";
 	
 	public static String PropertyType = ".//div[@data-type='js-property-list']//label[@for='";
 	
-	public static String Apply = ".//div[@data-type='pyr-overlay']";
+	public static String Apply = "//div[@class='circle-tick js-tick']//span[@class='applytxt']";
 	
-	public static String Location =	".//div[@data-type='location-placeholder']";
+	public static String Location =	"//div[@class='requirement-box clearfix location-wrap']//div[@class='col-sm-9 col-xs-9 location']";
 	
 	public static String Locality = ".//div[@id='pyrTypeAhead']//input[@data-type='query-text']";
 	

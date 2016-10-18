@@ -13,10 +13,12 @@ public static String NetworkSites ="//div[@data-module='footer']/div[4]";
 public static String MoreLinks ="//div[@data-module='footer']/div[5]";
 public static String SERPValidate= "//div[@class='srow']";
 
-public static String aboutusPage= "//h3[contains(text(),'about us')]";
-public static String Mediaresource= "//section[@class='mn-nws media-nws container']";
+public static String aboutusPage=        "//li[contains(text(),'About Us')]";
+public static String contactus=          "//li[contains(text(),'contact-us')]";
+public static String termsandconditions= "//li[contains(text(),'terms & conditions')]";
+public static String privaciPolicy=      "//li[contains(text(),'privacy-policy')]";
+public static String Mediaresource=      "//li[contains(text(),'media resources']";
 public static String ProptigerImg= "(//div[@class='propSearchBox'])[2]";
-
 public static String TextCentre= "//ul[@class='text-center']";
 
 public static String SocialLinks= "//div[@class='social']";

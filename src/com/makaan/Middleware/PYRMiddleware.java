@@ -35,14 +35,14 @@ public class PYRMiddleware {
 	public boolean OpenURL() throws NoSuchElementException, IOException, TimeoutException {
 		int res = 0;
 		String URL = ReadSheet("PYR", "URL", 2);
-		wb.InitiateDriver();
+		Webhelper.InitiateDriver();
 		System.out.println("Opening URL through Middleware");
 		wb.GetURL(URL);
-		res = wb.Get_Response(URL);
+		res = Webhelper.Get_Response(URL);
 		System.out.println("Response code got from URL " + res);
 		if (res == 200) {
 			System.out.println("Waiting till Makaan logo found on page");
-			wb.WaitUntillVisiblility(dict.MakaanLogo);
+			wb.WaitUntillVisiblility(PYRDictionary.MakaanLogo);
 		} else {
 			return false;
 		}
@@ -61,13 +61,11 @@ public class PYRMiddleware {
 	public static String PYRBuy(String Path)
 			throws NoSuchElementException, InterruptedException, TimeoutException, IOException, SQLException {
 		System.out.println("Validate PYR form for BUY Tab");
-		if (Path.equals(" ")) {
-			Path=dict.PYRLink;
-		}	
+			Path=PYRDictionary.PYRLink;
 			if (PYRRequirement("Buy",Path)) {
 				UserDetails();
 				Thread.sleep(1000);
-				wb.ClickbyXpath(dict.PYRSubmit);
+				wb.ClickbyXpath(PYRDictionary.PYRSubmit);
 				String result = VerifyPYR();
 				return result;
 			} else {
@@ -80,19 +78,19 @@ public class PYRMiddleware {
 	public static String PYRRent()
 			throws NoSuchElementException, InterruptedException, SQLException, IOException, TimeoutException {
 		System.out.println("Validate PYR form for Rent Tab");
-		if (PYRRequirement("Rent", dict.PYRLink)) {
-			wb.ClickbyXpath(dict.PYRSubmit);
+		if (PYRRequirement("Rent", PYRDictionary.PYRLink)) {
+			wb.ClickbyXpath(PYRDictionary.PYRSubmit);
 			Thread.sleep(2000);
 			try {
-				if (wb.IsElementPresent(dict.ErrorPage)) {
-					wb.ClickbyXpath(dict.Errorclose);
+				if (wb.IsElementPresent(PYRDictionary.ErrorPage)) {
+					wb.ClickbyXpath(PYRDictionary.Errorclose);
 					return ("Fail: No Seller is available plz try later");
 				}
 			} catch (Exception e) {
 
 			}
 			String result = VerifyEnquiry("rent");
-			wb.ClickbyXpath(dict.ClosePopup);
+			wb.ClickbyXpath(PYRDictionary.ClosePopup);
 			if (result.contains("Pass")) {
 				System.out.println("Enquiry is updated");
 			} else {
@@ -109,13 +107,13 @@ public class PYRMiddleware {
 		System.out.println("Entering User Details");
 		Thread.sleep(2000);
 		String UserName = ReadSheet("PYR", "UserName", 2);
-		wb.enterTextByxpath(dict.UserName, UserName);
+		wb.enterTextByxpath(PYRDictionary.UserName, UserName);
 		Thread.sleep(2000);
 		String Email = ReadSheet("PYR", "Email", 2);
-		wb.enterTextByxpath(dict.UserEmail, Email);
+		wb.enterTextByxpath(PYRDictionary.UserEmail, Email);
 		Thread.sleep(2000);
 		String phone = "8527019365";
-		wb.enterTextByxpath(dict.UserPhone, phone);
+		wb.enterTextByxpath(PYRDictionary.UserPhone, phone);
 
 	}
 
@@ -127,17 +125,21 @@ public class PYRMiddleware {
 		int OTP = 0;
 		String DB = "use user";
 		String Query1 = "select id from users where email = '".concat(ReadSheet("PYR", "Email", 2)).concat("' ;");
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		rs = db.Execute(Query1, DB);
 		while (rs.next()) {
 			userID = rs.getString("id");
 			System.out.println("User Id is " + userID);
 		}
-		String Query2 = "select * from user.user_otps where user_id = '".concat(userID).concat("' ;");
+		String Query2 = "select * from user.user_otps where user_id ='".concat(userID).concat("' ;");
 		rs = db.Execute(Query2, DB);
 		Thread.sleep(5000);
 		while (rs.next()) {
 			OTP = rs.getInt("otp");
+			if(OTP==0)
+			{
+				System.out.println("OTP did not came-Hence test failed");
+			}
 			System.out.println("OTP found in table is: " + OTP);
 		}
 		return OTP;
@@ -173,18 +175,18 @@ public class PYRMiddleware {
 		Thread.sleep(3000);
 		int OTP = 0;
 		try {
-			wb.WaitUntillVisiblility(dict.OTPPage);
-			if (wb.IsElementPresent(dict.OTPPage)) {
+			wb.WaitUntillVisiblility(PYRDictionary.OTPPage);
+			if (wb.IsElementPresent(PYRDictionary.OTPPage)) {
 				System.out.println("PYR form submited");
 				db.Connect();
 				OTP = GetOTP();
-				if (OTP == 0) {
-					return ("Fail: OTP found in DB is " + OTP);
+				if (OTP==0) {
+					return ("Fail: OTP is not found in DB:");
 				} else {
-					wb.enterTextByxpath(dict.OTPBox, OTP);
+					wb.enterTextByxpath(PYRDictionary.OTPBox, OTP);
 					System.out.println("Entered Otp");
-					wb.WaitUntillVisiblility(dict.ClosePopup);
-					wb.ClickbyXpath(dict.ClosePopup);
+					wb.WaitUntillVisiblility(PYRDictionary.ClosePopup);
+					wb.ClickbyXpath(PYRDictionary.ClosePopup);
 					if (VerifyEnquiry("buy").contains("Pass")) {
 						System.out.println("Enquiry is updated");
 					} else {
@@ -194,15 +196,15 @@ public class PYRMiddleware {
 			}
 		} catch (Exception e) {
 			try {
-				if (wb.IsElementPresent(dict.ErrorPage)) {
+				if (wb.IsElementPresent(PYRDictionary.ErrorPage)) {
 					System.err.println("No Seller is available plz try later");
-					wb.ClickbyXpath(dict.Errorclose);
+					wb.ClickbyXpath(PYRDictionary.Errorclose);
 					return ("Fail: NO seller was present ");
 				}
 			} catch (Exception ne) {
 				if (wb.IsElementPresent(".//div[@class='thanks-image']")) {
 					System.out.println("Thanks image appeared case passed");
-					wb.ClickbyXpath(dict.ClosePopup);
+					wb.ClickbyXpath(PYRDictionary.ClosePopup);
 					if (VerifyEnquiry("buy").contains("Pass")) {
 						System.out.println("Enquiry is updated");
 						return ("Pass: Enquiry is updated ");
@@ -221,39 +223,39 @@ public class PYRMiddleware {
 		System.out.println("Inside PYR VAlidation");
 		wb.ClickbyXpath(Path);
 		Thread.sleep(2000);
-		if (wb.IsElementPresent(dict.PYRForm)) {
+		if (wb.IsElementPresent(PYRDictionary.PYRForm)) {
 			if (Tab.equalsIgnoreCase("buy")) {
-				wb.WaitUntillVisiblility(dict.rentTab);
-				wb.ClickbyXpath(dict.rentTab);
-				wb.WaitUntillVisiblility(dict.buyTab);
-				wb.ClickbyXpath(dict.buyTab);
+				wb.WaitUntillVisiblility(PYRDictionary.rentTab);
+				wb.ClickbyXpath(PYRDictionary.rentTab);
+				wb.WaitUntillVisiblility(PYRDictionary.buyTab);
+				wb.ClickbyXpath(PYRDictionary.buyTab);
 			} else if (Tab.equalsIgnoreCase("rent")) {
-				wb.ClickbyXpath(dict.buyTab);
-				wb.ClickbyXpath(dict.rentTab);
+				wb.ClickbyXpath(PYRDictionary.buyTab);
+				wb.ClickbyXpath(PYRDictionary.rentTab);
 			}
-			wb.Slider(dict.Slider);
-			System.out.println("Minimum Range is " + wb.getText(dict.MinBudget));
-			System.out.println("MAximum Range is " + wb.getText(dict.MaxBudget));
+			//wb.Slider(PYRDictionary.Slider);
+			System.out.println("Minimum Range is " + wb.getText(PYRDictionary.MinBudget));
+			System.out.println("MAximum Range is " + wb.getText(PYRDictionary.MaxBudget));
 			String Bedroom = ReadSheet("PYR", "Bedroom", 2);
 			Thread.sleep(1000);
-			wb.ClickbyXpath(dict.Bedroom.concat(Bedroom).concat("']"));
-			wb.WaitUntillVisiblility(dict.Property);
-			wb.ClickbyXpath(dict.Property);
+			wb.ClickbyXpath(PYRDictionary.Bedroom.concat(Bedroom).concat("']"));
+			wb.WaitUntillVisiblility(PYRDictionary.Property);
+			wb.ClickbyXpath(PYRDictionary.Property);
 			String PropertyType = ReadSheet("PYR", "Property Type", 2);
-			wb.ClickbyXpath(dict.PropertyType.concat(PropertyType).concat("']"));
-			wb.ClickbyXpath(dict.Apply);
-			wb.WaitUntillVisiblility(dict.Location);
-			wb.ClickbyXpath(dict.Location);
+			wb.ClickbyXpath(PYRDictionary.PropertyType.concat(PropertyType).concat("']"));
+			wb.ClickbyXpath(PYRDictionary.Apply);
+			wb.WaitUntillVisiblility(PYRDictionary.Location);
+			wb.Jsclickbyxpath(PYRDictionary.Location);
 			String LocalityValue = ReadSheet("PYR", "Locality", 2);
 			Thread.sleep(4000);
-			wb.WaitUntillVisiblility(dict.Locality);
-			wb.enterTextByxpath(dict.Locality, LocalityValue);
+			wb.WaitUntillVisiblility(PYRDictionary.Locality);
+			wb.enterTextByxpath(PYRDictionary.Locality, LocalityValue);
 			Thread.sleep(1000);
-			wb.getText(dict.GetfirstElement);
+			wb.getText(PYRDictionary.GetfirstElement);
 			Thread.sleep(2000);
-			wb.ClickbyXpath(dict.GetfirstElement);
+			wb.ClickbyXpath(PYRDictionary.GetfirstElement);
 			Thread.sleep(3000);
-			wb.ClickbyXpath(dict.Apply);
+			wb.ClickbyXpath(PYRDictionary.Apply);
 		} else {
 			System.err.println("PYR form was not available");
 			return false;

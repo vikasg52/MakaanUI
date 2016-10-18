@@ -11,11 +11,11 @@ public class Home {
 
 	public static String SellerLink = ".//div[@data-type='sell-your-property']/a[@class='d-show']";
 
-	public static String Buyerjourney = ".//div[@class='profile-pic']//a";
+	public static String Buyerjourney = "//span[@class='avatar']";
 
-	public static String ValidateBuyerJourney = "//a[@data-type='track-my-journey']//span[@class='avatar']";
+	public static String ValidateBuyerJourney = "//a[@data-type='track-my-journey']";
 
-	public static String MenuDrawer = "//div[@class='login-wrap clearfix']//ul[@class='hamburger-icon']";
+	public static String MenuDrawer = "(//div[@class='hamburger-wrap']//ul[@class='hamburger-icon'])[2]";
 
 	public static String MenuDrawerJourney = ".//a[@data-track-action='Click_Drawer_DASHBOARD']";
 
@@ -41,9 +41,9 @@ public class Home {
 
 	public static String Inputnumber = ".//input[@data-type='send-sms-contact']";
 
-	public static String GetApp = ".//input[@data-type='sendSms']";
+	public static String GetApp = "//input[@data-type='sendSms']";
 
-	public static String ErrorApp = ".//div[@class='error-msg']";
+	public static String ErrorApp = "//div[@class='error-msg']";
 
 	public static String TopCityGeneric = "(//a[@data-track-action='CLICK_Top Cities'])[";
 
@@ -51,7 +51,7 @@ public class Home {
 
 	public static String TopBrokerGeneric = "(//a[@data-track-action='CLICK_Top Broker'])[";
 
-	public static String CityCover = ".//section[@class='city-cover']";
+	public static String CityCover = "//section[@class='city-cover']";
 
 	public static String Closepopup = ".//span[@data-type='close-login']";
 
@@ -63,12 +63,12 @@ public class Home {
 
 	public static String allBrokers = "//div[@class='all-broker-list clearfix']";
 
-	public static String BrokerCover = "//div[@class='bb-logo-wrap']";
+	public static String BrokerCover = "//div[@class='img-box-circular col-sm-3 no-padding']";
 
 	public static String VerifyMakaanIQ = ".//img[@title='makaan iQ']";
 
 	public static String GooglePlayLogo = "//div[@class='download-mobile-app clearfix']";
-	public static String SearchBox = "(//div[@class='thcontainer'])[2]";
+	public static String SearchBox = "//div[@class='search-wrap']//div[@id='homePageSearchBox']";
 	public static String BuyTab = "//div[@class='searchbox']//ul/li[@data-type='buy']";
 	public static String RentTab = "//div[@class='searchbox']//ul/li[@data-type='rent']";
 	public static String SearchLens = "(//div[@class='search-wrap']/i)[2]";
@@ -96,7 +96,7 @@ public class Home {
 	public static String CashBackButton = ".//a[@data-type='spill-beans']";
 	public static String verifyCashback = ".//div[@class='redeem-wrap']";
 	
-	public static String Mplus = "//section[@class='max1180 clearfix buyer-story']";
+	public static String Mplus = "//section[@class='max1180 clearfix buyer-story']//div[@class='big-makaan-ring']";
 	
 	public static String DownloadAppSectionImage = "//div[@class='clearfix max1140 download-makaan-wrap']";
 	

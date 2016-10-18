@@ -38,14 +38,14 @@ public class SearchMiddleware {
 	public boolean OpenURL() throws NoSuchElementException, IOException, TimeoutException {
 		int res = 0;
 		String URL = ReadSheet("Search", "URL", 2);
-		wb.InitiateDriver();
+		Webhelper.InitiateDriver();
 		System.out.println("Opening URL through Middleware");
 		wb.GetURL(URL);
-		res = wb.Get_Response(URL);
+		res = Webhelper.Get_Response(URL);
 		if (res == 200) {
 			System.out.println("Response code got from URL " + res);
 			System.out.println("Waiting till Makaan logo found on page");
-			wb.WaitUntillVisiblility(dict.MakaanLogo);
+			wb.WaitUntillVisiblility(Search.MakaanLogo);
 		} else {
 			System.err.println("Response code got from URL " + res);
 			return false;
@@ -63,9 +63,9 @@ public class SearchMiddleware {
 	}
 
 	public String ValidateSearch() {
-		if (wb.IsElementPresentById(dict.SearchBox)) {
+		if (wb.IsElementPresent(Search.SearchBox)) {
 			System.out.println("Search box exist");
-			if (wb.IsElementPresent(dict.BuyTab) && (wb.IsElementPresent(dict.RentTab))) {
+			if (wb.IsElementPresent(Search.BuyTab) && (wb.IsElementPresent(Search.RentTab))) {
 				System.out.println("buy and renttab is present on search box");
 			} else {
 				return ("Fail: buy and renttab is not present on search box");
@@ -78,16 +78,31 @@ public class SearchMiddleware {
 		return ("Pass: Search Box Validation is completed ");
 	}
 
+	public static void closechat()  {
+		try {
+			wb.WaitUntill(Search.chatPopup);
+			if (wb.IsElementPresent(Search.chatPopup)) {
+				// wb.ClickbyXpath(".//textarea[@id='input']");
+				wb.scrollinView(Search.CloseChat);
+				wb.ClickbyXpath(Search.CloseChat);
+				System.out.println("Closed mchat popup");
+			}
+		} catch (Exception e) {
+			System.out.println("mchat popup was not present");
+		}
+
+	}
 	public String ValidateSuggestions() throws TimeoutException, InterruptedException {
-		List<String> arr = new ArrayList();
-		wb.WaitUntillID(dict.SearchBox);
-		wb.ClickbyId(dict.SearchBox);
-		Thread.sleep(1000);
-		wb.WaitUntillVisiblility(dict.Suggestiontype);
-		arr = wb.GetElementvalues(dict.Suggestiontype);
+		List<String> arr = new ArrayList<String>();
+		wb.WaitUntill(Search.SearchBox);
+		//closechat();
+		wb.ClickbyXpath(Search.SearchBox);
+		Thread.sleep(2000);
+		wb.WaitUntillVisiblility(Search.Suggestiontype);
+		arr = wb.GetElementvalues(Search.Suggestiontype);
 		for (int i = 0; i < arr.size(); i++) {
 			System.out.println("element on Search bar is: " + arr.get(i));
-			if ((arr.get(i).contains("delhi")) || (arr.get(i).contains("gurgaon"))) {
+			if ((arr.get(i).contains("mumbai")) || (arr.get(i).contains("gurgaon"))) {
 				System.out.println("Popular Suggestions found on page are " + arr.get(i));
 			} else {
 				return ("Fail: Popular Suggestions was not present on search box");			
@@ -225,45 +240,45 @@ public class SearchMiddleware {
 
 	public String ValidateGeneric(String Tab, String Column)
 			throws TimeoutException, NoSuchElementException, IOException, InterruptedException {
-		List<String> arr = new ArrayList();
+		List<String> arr = new ArrayList<String>();
 		String TabSelect = null;
-		Thread.sleep(2000);
-		wb.WaitUntill(dict.SearchBoxInput);
-		wb.ClickbyXpath(dict.SearchBoxInput);
-		List<String> arr1 = new ArrayList();
-		Thread.sleep(2000);
+		wb.WaitUntill(Search.SearchBoxInput);
+		wb.ClickbyXpath(Search.SearchBoxInput);
+		List<String> arr1 = new ArrayList<String>();
 		if (Tab.equals("Buy")) {
-			TabSelect = dict.BuyTab;
+			TabSelect = Search.BuyTab;
 		} else if (Tab.equals("Rent")) {
-			TabSelect = dict.RentTab;
+			TabSelect = Search.RentTab;
 		}
 		Thread.sleep(2000);
-		for (int i = 2; i < 6; i++) {
+		for (int i =2; i < 6; i++) {
 			arr1.add(ReadSheet("search", Column, i));
 			System.out.println(arr1.toString());
 		}
 			for (int j = 0; j < arr1.size(); j++) {
-				System.out.println("value of j " + j);
+				System.out.println("value of index is: " + j);
 				String result = null;
+				closechat();
+				wb.WaitUntill(TabSelect);
 				wb.ClickbyXpath(TabSelect);
-				Thread.sleep(2000);
-				wb.WaitUntill(dict.SearchBoxInput);
-				wb.enterTextByxpath(dict.SearchBoxInput, arr1.get(j));
+				closechat();
+				wb.WaitUntill(Search.SearchBoxInput);
+				wb.enterTextByxpath(Search.SearchBoxInput, arr1.get(j));
+				closechat();
 				System.out.println("data in array sheet is: " + arr1.get(j));
-				Thread.sleep(2000);
-				wb.WaitUntillVisiblility(dict.Suggestiontype);
-				arr = wb.GetElementvalues(dict.Suggestiontype);
+				wb.WaitUntillVisiblility(Search.Suggestiontype);
+				arr = wb.GetElementvalues(Search.Suggestiontype);
 				if (Column.equals("Landmark")) {
 					for (int k = 0; k < arr.size(); k++) {
-						if (wb.getText(dict.WrongSearch).contains("sorry")) {
+						if (wb.getText(Search.WrongSearch).contains("sorry")) {
 							return ("Fail: No Search Suggestions found for " +Column +" "+arr1.get(j));
 
 						} else if ((arr.get(k).contains(arr1.get(j)))
-								&& ((wb.getText(dict.Propertytype)).equalsIgnoreCase(Column))) {
+								&& ((wb.getText(Search.Propertytype)).equalsIgnoreCase(Column))) {
 							System.out.println("Search for Landmark is matching with data provided: " + arr.get(k));
-							System.out.println("value of k" +k);
+							System.out.println("value of search index is:" +k);
 							int m = k + 1;
-							String Var = dict.FirstSearchSuggestion + m + "']";
+							String Var = Search.FirstSearchSuggestion + m + "']";
 							 result = ValidateSearchURL(Var);
 							if (result.contains("Pass")) {
 								System.out.println("return true from validate Search page");
@@ -283,14 +298,14 @@ public class SearchMiddleware {
 					
 				} else if (Column.equals("Builder")) {
 					for (int k = 0; k < arr.size(); k++) {
-						if (wb.getText(dict.WrongSearch).contains("sorry")) {
+						if (wb.getText(Search.WrongSearch).contains("sorry")) {
 							return ("Fail: No Search Suggestions found" + "Builder" + arr1.get(j));
 						} else if ((arr.get(k).contains(arr1.get(j)))
-								&& ((wb.getText(dict.Propertytype)).equalsIgnoreCase(Column))) {
+								&& ((wb.getText(Search.Propertytype)).equalsIgnoreCase(Column))) {
 							System.out.println("Search for Builder is matching with data provided: " + arr1.get(j));
 							System.out.println("value of k" +k);
 							int m = k + 1;
-							String Var = dict.FirstSearchSuggestion + m + "']";
+							String Var = Search.FirstSearchSuggestion + m + "']";
 							result = ValidateSearchURL(Var);
 							if (result.contains("Pass")) {
 								System.out.println("return true from validate Search page");
@@ -313,7 +328,7 @@ public class SearchMiddleware {
 							System.out.println("Search for Locality is matching with data provided: " + arr.get(k));
 							int m = k + 1;
 							System.out.println("value of k" +k);
-							String Var = dict.FirstSearchSuggestion + m + "']";
+							String Var = Search.FirstSearchSuggestion + m + "']";
 							System.out.println(Var);
 							result = ValidateSearchURL(Var);
 							if (result.contains("Pass"))  {
@@ -323,7 +338,7 @@ public class SearchMiddleware {
 								return ("Fail: The Page validation was not validated for "+arr1.get(j));
 								
 							}
-						} else if (wb.getText(dict.WrongSearch).contains("sorry")) {
+						} else if (wb.getText(Search.WrongSearch).contains("sorry")) {
 							return ("Fail: No Search Suggestions found "+arr1.get(j));
 						} else if(k >arr.size()){
 							return ("Fail: Not able to find value in suggestions "+arr1.get(j));
@@ -335,10 +350,16 @@ public class SearchMiddleware {
 					
 				}
 			}
-			if (wb.IsElementSelected(dict.BuyTab)) {
-				wb.ClickbyXpath(dict.RentTab);
-			} else if (wb.IsElementSelected(dict.RentTab)) {
-				wb.ClickbyXpath(dict.BuyTab);
+			closechat();
+		
+			if (wb.IsElementSelected(Search.BuyTab)) {
+				wb.WaitUntill(Search.RentTab);
+				wb.ClickbyXpath(Search.RentTab);
+				Thread.sleep(2000L);
+			} else if (wb.IsElementSelected(Search.RentTab)) {
+				wb.WaitUntill(Search.BuyTab);
+				Thread.sleep(3000L);
+				wb.ClickbyXpath(Search.BuyTab);
 			}
 	
 		return ("Pass ");
@@ -348,7 +369,7 @@ public class SearchMiddleware {
 	public String ValidateSearchURL(String Element) throws IOException, InterruptedException {
 		wb.ClickbyXpath(Element);
 		String URL = wb.CurrentURL();
-		int res = wb.Get_Response(URL);
+		int res = Webhelper.Get_Response(URL);
 		if (res == 200) {
 			System.out.println("Response Code of " + URL + "is " + res);
 			Thread.sleep(4000);

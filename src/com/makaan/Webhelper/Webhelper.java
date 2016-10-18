@@ -1,5 +1,6 @@
 package com.makaan.Webhelper;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -8,7 +9,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
@@ -19,12 +19,13 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
-
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -34,29 +35,20 @@ public class Webhelper {
 	static WebDriver driver = null;
 
 	public static void InitiateDriver() throws TimeoutException{
-
-		//FirefoxProfile profile = new FirefoxProfile();
-
-		/*profile.setPreference("browser.startup.homepage_override.mstone", "ignore");
-		profile.setPreference("startup.homepage_welcome_url", "about:blank");
-		profile.setPreference("startup.homepage_welcome_url.additional", "about:blank");
-		profile.setPreference("browser.startup.homepage", "about:blank");
-		System.setProperty("webdriver.firefox.bin", "/opt/firefox/firefox");
-		System.setProperty("webdriver.chrome.driver","/home/surabhi/labs/AutomationBuyerWeb/lib/chromedriver");
-		driver = new ChromeDriver();*/
-		System.setProperty("webdriver.gecko.driver","/Users/vikas/Documents/workspace/MakaanUI/lib/geckodriver");
-		driver = new FirefoxDriver();
-		
-		//driver.manage().window().setSize(new Dimension(1366, 768));
-		//driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
-		}
+		//FirefoxProfile firefoxProfile = new FirefoxProfile();
+	   // firefoxProfile.setPreference("reader.parse-on-load.enabled",false);
+		//DesiredCapabilities dcap = new DesiredCapabilities();
+		//dcap.setJavascriptEnabled(true);
+    System.setProperty("webdriver.gecko.driver","/Users/vikas/Documents/workspace/MakaanUI/lib/geckodriver");
+    driver = new FirefoxDriver();
+    driver.manage().window().maximize();
+    }
   public void GetURL(String URL) {
 		System.out.println("opening URL throgh webhelper");
 		System.out.println(URL + " url in webhelper");
 		driver.get(URL);
-
-		// busyIndicationWait(driver);
-		// driver.navigate().refresh();
+        //busyIndicationWait(driver);
+		driver.navigate().refresh();
 
 	}
 
@@ -68,25 +60,33 @@ public class Webhelper {
 
 	public void WaitUntillVisiblility(String webElement) throws TimeoutException {
 
-		WebDriverWait wait1 = new WebDriverWait(driver, 60);
+		WebDriverWait wait1 = new WebDriverWait(driver, 180);
 		wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(webElement)));
 
 	}
 
+	public void WaitUntillSelected(String webElement) throws TimeoutException {
+
+		WebDriverWait wait1 = new WebDriverWait(driver, 180);
+		wait1.until(ExpectedConditions.elementToBeSelected(By.xpath(webElement)));
+
+	}
+
+
 	public void WaitUntill(String element) throws TimeoutException {
-		WebDriverWait wait1 = new WebDriverWait(driver, 60);
+		WebDriverWait wait1 = new WebDriverWait(driver, 100);
 		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath(element)));
 
 	}
 
 	public void WaitUntillID(String element) throws TimeoutException {
-		WebDriverWait wait1 = new WebDriverWait(driver, 60);
+		WebDriverWait wait1 = new WebDriverWait(driver, 80);
 		wait1.until(ExpectedConditions.elementToBeClickable(By.id(element)));
 
 	}
 
 	public void WaitUntillIDVisibility(String element) throws TimeoutException {
-		WebDriverWait wait1 = new WebDriverWait(driver, 60);
+		WebDriverWait wait1 = new WebDriverWait(driver, 80);
 		wait1.until(ExpectedConditions.visibilityOfElementLocated(By.id(element)));
 	}
 
@@ -250,11 +250,16 @@ public class Webhelper {
 		Thread.sleep(2000);
 		((JavascriptExecutor) driver).executeScript("window.scrollBy(0,1000)");
 		Thread.sleep(2000);
+		}
+	
+	public void scrollinView(String Webelement)
+	{
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
 
+		jse.executeScript("arguments[0].scrollIntoView()", Webelement);
 	}
 	
-	
-	
+
 	public ArrayList<WebElement> getElements(String Path) throws InterruptedException {
 		ArrayList<WebElement> arr = new ArrayList();
 		arr = (ArrayList<WebElement>) driver.findElements(By.xpath(Path));
@@ -284,8 +289,8 @@ public class Webhelper {
 
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
 			con.setRequestMethod("HEAD");
-
-			res = con.getResponseCode();
+           res = con.getResponseCode();
+           Thread.sleep(4000L);
 			System.out.println("rseponse code found is "+res);
 			if (res / 100 == 3) {
 				System.out.println("response: " + res);
@@ -299,6 +304,9 @@ public class Webhelper {
 			e.printStackTrace();
 		}
 		catch(IOException e){
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return res;

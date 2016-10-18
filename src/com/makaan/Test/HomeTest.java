@@ -36,7 +36,7 @@ public class HomeTest {
 
 	}
 	
-	@Test(priority = 0)
+	@Test(priority = 4)
 		public void CloseChat()  {
 			System.out.println("Inside Test Close Chat");
 				 hm.closechat();
@@ -64,7 +64,7 @@ public class HomeTest {
 		}
 	
 
-	 @Test(priority = 2)
+	@Test(priority = 2)
 	//@Test(enabled = false)
 	public void ValidateDownloadAppButton() throws InterruptedException, IOException {
 		System.out.println("Inside Test Validate Download app button");
@@ -84,6 +84,7 @@ public class HomeTest {
 	}
 
 	 @Test(priority = 3)
+	 //@Test(enabled = false)
 	public void ValidateSellerLink() throws InterruptedException {
 		System.out.println("Inside Test Validate Seller Link");
 		try {
@@ -103,7 +104,7 @@ public class HomeTest {
 
 	}
 
-	 	@Test(priority = 4)
+	 	@Test(priority = 0)
 		//@Test(enabled = false)
 		public void ValidateBuyerJourney() throws InterruptedException {
 			System.out.println("Inside Test Validate Buyer Journey");
@@ -185,7 +186,7 @@ public class HomeTest {
 			}
 		}
 
-		 @Test(priority = 8)
+		@Test(priority = 8)
 		//@Test(enabled = false)
 		public void BrokerDrawer() throws InterruptedException {
 			System.out.println("Inside Test Validate Top Brokers in Drawer");
@@ -271,7 +272,7 @@ public class HomeTest {
 
 	 @Test(priority = 12)
 	//@Test(enabled = false)
-	public void ValidateSearchPlaceHolder() throws InterruptedException {
+	public void ValidateSearchPlaceHolder() throws InterruptedException, TimeoutException {
 		System.out.println("Inside Test Validate Search Box");
 		try {
 			String res = hm.ValidateSearchBox();

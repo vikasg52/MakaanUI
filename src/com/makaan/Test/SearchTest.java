@@ -30,7 +30,7 @@ public class SearchTest {
 	}
 
 	 //@Test(enabled =false)
-	@Test(priority = 1)
+	@Test(priority = 0)
 	public void ValidateSearchBox() {
 		System.out.println("Inside Test Validate Search Box");
 		try {
@@ -46,8 +46,8 @@ public class SearchTest {
 		}
 	}
 
-	 @Test(enabled =false)
-	//@Test(priority = 2)
+	@Test(enabled =false)
+	//@Test(priority = 10)
 	public void ValidatePopularSuggestions() throws InterruptedException  {
 		System.out.println("Inside Test Validate Popular Suggestions");
 		try {
@@ -65,9 +65,10 @@ public class SearchTest {
 	}
 
 	 //@Test(enabled =false)
-	@Test(priority = 3)
+	@Test(priority = 2)
 	public void ValidateBuyLocalities() throws InterruptedException  {
 		try {
+			
 			String res = smw.ValidateBuyLocality();
 			if (res.contains("Pass")) {
 				System.out.println("Search Box Validated for buy Localities");
@@ -84,7 +85,7 @@ public class SearchTest {
 	}
 
 	 //@Test(enabled =false)
-	@Test(priority = 4)
+	@Test(priority = 3)
 	public void ValidateRentLocalities() throws InterruptedException  {
 		System.out.println("Inside Test Validate Rent Locality");
 		try {
@@ -104,7 +105,7 @@ public class SearchTest {
 	}
 
 	 //@Test(enabled =false)
-	@Test(priority = 5)
+	@Test(priority = 4)
 	public void ValidateBuyProject() throws InterruptedException  {
 		System.out.println("Inside Test Validate Buy Project");
 		try {
@@ -124,7 +125,7 @@ public class SearchTest {
 	}
 
 	 //@Test(enabled =false)
-	@Test(priority = 6)
+	@Test(priority = 5)
 	public void ValidateRentProject() throws InterruptedException {
 		System.out.println("Inside Test Validate Rent Project");
 		try {
@@ -144,7 +145,7 @@ public class SearchTest {
 	}
 
 	 //@Test(enabled =false)
-	@Test(priority = 7)
+	@Test(priority = 6)
 	public void ValidateBuilder() throws InterruptedException  {
 		System.out.println("Inside Test Validate Builder");
 		try {
@@ -163,8 +164,8 @@ public class SearchTest {
 		}
 	}
 
-	@Test(enabled = false)
-	 //@Test(priority = 8)
+	//@Test(enabled = false)
+	 @Test(priority = 7)
 	public void ValidateBuyLandmark() throws InterruptedException  {
 		System.out.println("Inside Test Validate Landmark buy");
 		System.out.println("Inside Test Validate Builder");
@@ -184,8 +185,8 @@ public class SearchTest {
 		}
 	}
 
-	@Test(enabled = false)
-	 //@Test(priority = 9)
+	//@Test(enabled = false)
+	 @Test(priority = 8)
 	public void ValidateRentLandmark() throws InterruptedException {
 		System.out.println("Inside Test Validate Landmark Rent");
 		try {
@@ -205,7 +206,7 @@ public class SearchTest {
 	}
 
 	 //@Test(enabled =false)
-	@Test(priority = 10)
+	@Test(priority = 1)
 	public void ValidateSuburbBuy() throws InterruptedException {
 		System.out.println("Inside Test Validate Suburb");
 		
@@ -226,7 +227,7 @@ public class SearchTest {
 	}
 
 	 //@Test(enabled =false)
-	@Test(priority = 11)
+	@Test(priority = 9)
 	public void ValidateSuburbRent() throws Exception {
 		System.out.println("Inside Test Validate Suburb Rent");
 		

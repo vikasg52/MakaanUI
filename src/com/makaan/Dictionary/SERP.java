@@ -6,7 +6,7 @@ public class SERP {
 	
 	//public static String MakaanLogo = ".//div[@class='makaan-logo']";
 
-	public static String filterbar = ".//div[@class='lsfix clearfix']";
+	public static String filterbar = "//div[@id='mod-filter-1']";
 
 	public static String buy_rentdropdown = ".//div[@data-type='categoryDropdown']/i";
 

@@ -37,14 +37,15 @@ public class LoginMiddleware {
 	public boolean OpenURL() throws NoSuchElementException, IOException, TimeoutException {
 		int res = 0;
 		String URL = ReadSheet("Login", "URL", 2);
-		wb.InitiateDriver();
+		Webhelper.InitiateDriver();
 		System.out.println("Opening URL through Middleware");
 		wb.GetURL(URL);
-		res = wb.Get_Response(URL);
+		res = Webhelper.Get_Response(URL);
 		if (res == 200) {
 			System.out.println("Response code got from URL " + res);
 			System.out.println("Waiting till Makaan logo found on page");
-			wb.WaitUntillVisiblility(dict.MakaanLogo);
+			SearchMiddleware.closechat();
+			wb.WaitUntillVisiblility(Login.MakaanLogo);
 		} else {
 			System.err.println("Response code got from URL " + res);
 			return false;
@@ -62,9 +63,9 @@ public class LoginMiddleware {
 	}
 
 	public String LoginForm() throws TimeoutException {
-		wb.WaitUntillVisiblility(dict.Login);
-		if (wb.IsElementPresent(dict.Login)) {
-			return ("Pass: Logi Form is validated");
+		wb.WaitUntillVisiblility(Login.Login);
+		if (wb.IsElementPresent(Login.Login)) {
+			return ("Pass: Login Form is validated");
 
 		} else {
 			return ("Fail: Login form is not validated");
@@ -75,16 +76,22 @@ public class LoginMiddleware {
 	public boolean  SocialLogin()
 			throws InterruptedException, TimeoutException, NoSuchElementException, IOException {
 		Thread.sleep(3000);
-		wb.WaitUntill(dict.Login);
-		wb.ClickbyXpath(dict.Login);
-		Thread.sleep(2000);
-		if (wb.IsElementPresent(dict.facebookLogin) && wb.IsElementPresent(dict.GoogleLoginWindow)) {
+		SearchMiddleware.closechat();
+		wb.WaitUntillVisiblility(Login.Login);
+        SearchMiddleware.closechat();
+		wb.Jsclickbyxpath(Login.Login);
+		wb.WaitUntill(Login.facebookLogin);
+		//wb.WaitUntill(Login.facebookLogin);
+		if (wb.IsElementPresent(Login.facebookLogin) && wb.IsElementPresent(Login.GoogleLoginWindow)) {
 			System.out.println("Social login button  pesent");
 			if (VerifyFBLogin() && VerifyGoogleLogin()) {
 				System.out.println("Social login is verified");
+				//wb.WaitUntillIDVisibility(Login.closeLogin);
+				//wb.ClickbyXpath(Login.closeLogin);
 			}
 			else {
-				wb.ClickbyXpath(dict.closeLogin);
+				wb.WaitUntillVisiblility(Login.closeLogin);
+				wb.Jsclickbyxpath(Login.closeLogin);
 				System.err.println("Social login can not be verified due to error");
 				return false;
 			}
@@ -94,11 +101,11 @@ public class LoginMiddleware {
 
 	public static boolean VerifyFBLogin() throws TimeoutException, InterruptedException, IOException {
 		System.out.println("verifying fb login");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		driver = wb.getDriver();
 		String parentHandle = driver.getWindowHandle();
-		wb.WaitUntill(dict.facebookLogin);
-		driver.findElement(By.xpath(dict.facebookLogin)).click();
+		wb.WaitUntillVisiblility(Login.facebookLogin);
+		driver.findElement(By.xpath(Login.facebookLogin)).click();
 		Thread.sleep(2000);
 
 		for (String winHandle : driver.getWindowHandles()) {
@@ -106,15 +113,14 @@ public class LoginMiddleware {
 
 		}
 		try {
-			wb.WaitUntillID(dict.FBUserId);
-			if (driver.findElement(By.id(dict.FBUserId)).isDisplayed()) {
+			wb.WaitUntillVisiblility(Login.FBUserId);
+			if (driver.findElement(By.xpath(Login.FBUserId)).isDisplayed()) {
 				System.out.println("Element is present on Switch Window");
-				driver.findElement(By.id(dict.FBUserId)).sendKeys(ReadSheet("Login", "UserName", 2));
-				driver.findElement(By.id(dict.FBUserPass)).sendKeys(ReadSheet("Login", "Password", 2));
-				driver.findElement(By.xpath(dict.FBLoginButton)).click();
-				Thread.sleep(4000);
-
-				driver.switchTo().window(parentHandle);
+				driver.findElement(By.xpath(Login.FBUserId)).sendKeys(ReadSheet("Login", "UserName", 2));
+				driver.findElement(By.xpath(Login.FBUserPass)).sendKeys(ReadSheet("Login", "Password", 2));
+				driver.findElement(By.xpath(Login.FBLoginButton)).click();
+				Thread.sleep(5000);
+                driver.switchTo().window(parentHandle);
 				/*
 				 * String UserName = ReadSheet("Login", "UserName", 2); UserName
 				 * = UserName.substring(0, 1); if
@@ -137,12 +143,13 @@ public class LoginMiddleware {
 	public static boolean VerifyGoogleLogin() throws TimeoutException, InterruptedException, IOException {
 		Thread.sleep(2000);
 		System.out.println("verifying social login");
-		wb.WaitUntill(dict.Login);
-		wb.ClickbyXpath(dict.Login);
+		wb.WaitUntill(Login.Login);
+		SearchMiddleware.closechat();
+		wb.Jsclickbyxpath(Login.Login);
 		Thread.sleep(2000);
 		driver = wb.getDriver();
 		String parentHandle = driver.getWindowHandle();
-		driver.findElement(By.xpath(dict.GoogleLoginWindow)).click();
+		driver.findElement(By.xpath(Login.GoogleLoginWindow)).click();
 		Thread.sleep(2000);
 
 		for (String winHandle : driver.getWindowHandles()) {
@@ -150,14 +157,14 @@ public class LoginMiddleware {
 
 		}
 		try {
-			wb.WaitUntill(dict.GoogleUserId);
-			if (driver.findElement(By.xpath(dict.GoogleUserId)).isDisplayed()) {
+			wb.WaitUntill(Login.GoogleUserId);
+			if (driver.findElement(By.xpath(Login.GoogleUserId)).isDisplayed()) {
 				System.out.println("Element is present on Google form");
-				driver.findElement(By.xpath(dict.GoogleUserId)).sendKeys(ReadSheet("Login", "UserName", 3));
-				driver.findElement(By.xpath(dict.GoogleNext)).click();
-				wb.WaitUntill(dict.GooglePass);
-				driver.findElement(By.xpath(dict.GooglePass)).sendKeys(ReadSheet("Login", "Password", 3));
-				driver.findElement(By.xpath(dict.GoogleLogin)).click();
+				driver.findElement(By.xpath(Login.GoogleUserId)).sendKeys(ReadSheet("Login", "UserName", 3));
+				driver.findElement(By.xpath(Login.GoogleNext)).click();
+				wb.WaitUntill(Login.GooglePass);
+				driver.findElement(By.xpath(Login.GooglePass)).sendKeys(ReadSheet("Login", "Password", 3));
+				driver.findElement(By.xpath(Login.GoogleLogin)).click();
 				Thread.sleep(4000);
 				driver.switchTo().window(parentHandle);
 				/*
@@ -183,32 +190,34 @@ public class LoginMiddleware {
 	public boolean MakaanLogin() throws TimeoutException, NoSuchElementException, IOException, InterruptedException {
 		System.out.println("inside mkaan login");
 		Thread.sleep(3000);
-		wb.WaitUntill(dict.Login);
-		wb.ClickbyXpath(dict.Login);
-		Thread.sleep(2000);
-		if (wb.IsElementPresent(dict.BasicLogin)) {
+		wb.WaitUntill(Login.Login);
+		SearchMiddleware.closechat();
+		wb.Jsclickbyxpath(Login.Login);
+		wb.WaitUntillVisiblility(Login.BasicLogin);
+		if (wb.IsElementPresent(Login.BasicLogin)) {
 			System.out.println("makaan login button is present on form");
-			wb.ClickbyXpath(dict.BasicLogin);
-			Thread.sleep(2000);
-			if (wb.IsElementPresent(dict.MakaanForm)) {
+			wb.Jsclickbyxpath(Login.BasicLogin);
+			wb.WaitUntillVisiblility(Login.MakaanForm);
+			if (wb.IsElementPresent(Login.MakaanForm)) {
 				System.out.println("makaan login form is present");
 				String Username = ReadSheet("Login", "UserName", 4);
 				String Password = ReadSheet("Login", "Password", 4);
-				wb.enterTextByID(dict.UserName, Username);
+				wb.enterTextByID(Login.UserName, Username);
 				Thread.sleep(1000);
-				wb.enterTextByID(dict.Password, Password);
-				wb.WaitUntill(dict.BasicLoginButton);
-				wb.ClickbyXpath(dict.BasicLoginButton);
-				wb.WaitUntillVisiblility(dict.VerifyMakaanLogin1);
+				wb.enterTextByID(Login.Password, Password);
+				wb.WaitUntill(Login.BasicLoginButton);
+				wb.Jsclickbyxpath(Login.BasicLoginButton);
+				wb.WaitUntillVisiblility(Login.VerifyMakaanLogin1);
 				String Initials = Username.substring(0, 1);
 
-				if (wb.getText(dict.VerifyMakaanLogin1).equalsIgnoreCase(Initials)) {
+				if (wb.getText(Login.VerifyMakaanLogin1).equalsIgnoreCase(Initials)) {
 					System.out.println("Login successfull");
 					Thread.sleep(2000);
 
-				} else if (wb.IsElementPresent(dict.VerifyMakaanLogin)) {
+				} else if (wb.IsElementPresent(Login.VerifyMakaanLogin)) {
 					System.err.println("Error found while makaan Login closing popup now");
-					wb.ClickbyXpath(dict.closeLogin);
+					SearchMiddleware.closechat();
+					wb.Jsclickbyxpath(Login.closeLogin);
 					return false;
 				}
 
@@ -226,30 +235,28 @@ public class LoginMiddleware {
 	public static boolean ForgetPassword()
 			throws TimeoutException, NoSuchElementException, IOException, InterruptedException {
 		System.out.println("inside Forgotpassword in middleware");
-		Thread.sleep(3000);
-		wb.WaitUntill(dict.Login);
-		wb.ClickbyXpath(dict.Login);
-		Thread.sleep(2000);
-		wb.WaitUntill(dict.BasicLogin);
-		wb.ClickbyXpath(dict.BasicLogin);
-		Thread.sleep(1000);
-		wb.WaitUntill(dict.Forgotpassword);
-		if (wb.IsElementPresent(dict.Forgotpassword)) {
+		SearchMiddleware.closechat();
+		wb.WaitUntillVisiblility(Login.Login);
+		wb.Jsclickbyxpath(Login.Login);
+		wb.WaitUntill(Login.BasicLogin);
+		wb.Jsclickbyxpath(Login.BasicLogin);
+		wb.WaitUntill(Login.Forgotpassword);
+		if (wb.IsElementPresent(Login.Forgotpassword)) {
 			System.out.println("Forgot password button is present on form");
-			wb.ClickbyXpath(dict.Forgotpassword);
-			wb.WaitUntill(dict.ForgetPasswordWindow);
-			if (wb.getText(dict.ForgetPasswordWindow).equals("reset password")) {
+			wb.Jsclickbyxpath(Login.Forgotpassword);
+			wb.WaitUntill(Login.ForgetPasswordWindow);
+			if (wb.getText(Login.ForgetPasswordWindow).equals("reset password")) {
 				System.out.println("Forget password button on window is present");
 				String Username = ReadSheet("Login", "UserName", 4);
 
-				wb.enterTextByxpath(dict.ForgotpasswordInput, Username);
-				wb.WaitUntill(dict.ForgetSubmit);
-				wb.ClickbyXpath(dict.ForgetSubmit);
-				wb.WaitUntillVisiblility(dict.VerifyForgotPassword);
-				String Message = wb.getText(dict.VerifyForgotPassword);
+				wb.enterTextByxpath(Login.ForgotpasswordInput, Username);
+				wb.WaitUntill(Login.ForgetSubmit);
+				wb.Jsclickbyxpath(Login.ForgetSubmit);
+				wb.WaitUntillVisiblility(Login.VerifyForgotPassword);
+				String Message = wb.getText(Login.VerifyForgotPassword);
 				if (Message.contains("sorry")) {
 					System.err.println("error occured while reset password may be wrong email or network issue");
-					wb.ClickbyXpath(dict.closeLogin);
+					wb.ClickbyXpath(Login.closeLogin);
 					return false;
 				} else if (Message.contains("a link to reset password has been sent to your email id")) {
 					if (VerifyEmail(Username)) {
@@ -309,17 +316,19 @@ public class LoginMiddleware {
 	public static boolean ResetPassword() throws NoSuchElementException, IOException, TimeoutException, InterruptedException {
 		String URL = GetToken();
 		wb.GetURL(URL);
-		int res = wb.Get_Response(URL);
+		SearchMiddleware.closechat();
+		int res = Webhelper.Get_Response(URL);
 		if(res ==200){
 			System.out.println("Response code of "+ URL + "is "+ res);
-		if (wb.IsElementPresentById(dict.Newpassword)) {
-			wb.enterTextByID(dict.Newpassword, "abcd1234");
-			wb.enterTextByID(dict.Confirmpassword, "abcd1234");
-			wb.ClickbyXpath(dict.resetPassword);
+		if (wb.IsElementPresent(Login.Newpassword)) {
+			wb.enterTextByxpath(Login.Newpassword,"abcd1234");
+			wb.enterTextByxpath(Login.Confirmpassword, "abcd1234");
+			wb.Jsclickbyxpath(Login.resetPassword);
 			Thread.sleep(4000);
-			if (wb.IsElementPresent(dict.Login)) {
+			wb.WaitUntillVisiblility(Login.Login);
+			if (wb.IsElementPresent(Login.Login)) {
 				System.out.println("Reset password Case Passed");
-			} else if (wb.IsElementPresent(dict.VerifyresetPassword)) {
+			} else if (wb.IsElementPresent(Login.VerifyresetPassword)) {
 				System.err.println("Some error occured while reseting password");
 				return false;
 			}
@@ -370,11 +379,20 @@ public class LoginMiddleware {
 
 	public static boolean MakaanLogout() throws TimeoutException, InterruptedException {
 		System.out.println("inside MakaanLogout in middleware");
-		Thread.sleep(2000);
-		wb.WaitUntillVisiblility(dict.MenuDrawer);
-		wb.ClickbyXpath(dict.MenuDrawer);
-		if (wb.IsElementPresentById(dict.Logout)) {
-			wb.ClickbyId(dict.Logout);
+		//wb.scrollinView(Login.MenuDrawer);
+		wb.WaitUntill(Login.MenuDrawer);
+		SearchMiddleware.closechat();
+		if(wb.IsElementPresent(Login.MenuDrawer))
+		{
+		System.out.println("Menu drawer is present..");}
+		else{
+			wb.PageRefresh(); 
+			Thread.sleep(3000L);}
+		wb.Jsclickbyxpath(Login.MenuDrawer);
+		wb.WaitUntillVisiblility(Login.Logout);
+		if (wb.IsElementPresent(Login.Logout)) {
+			SearchMiddleware.closechat();
+			wb.Jsclickbyxpath(Login.Logout);
 			Thread.sleep(1000);
 			System.out.println("successfully logged out");
 			return true;
@@ -388,43 +406,44 @@ public class LoginMiddleware {
 	public boolean MakaanSignup() throws TimeoutException, NoSuchElementException, IOException, InterruptedException {
 		System.out.println("inside SignUp in middleware");
 		Thread.sleep(2000);
-		wb.WaitUntill(dict.Login);
-		wb.ClickbyXpath(dict.Login);
+		SearchMiddleware.closechat();
+		wb.WaitUntillVisiblility(Login.Login);
+		wb.Jsclickbyxpath(Login.Login);
 		Thread.sleep(2000);
-		if (wb.IsElementPresent(dict.Signup)) {
+		if (wb.IsElementPresent(Login.Signup)) {
 			System.out.println("Create Acount button is present on form");
-			wb.ClickbyXpath(dict.Signup);
+			wb.Jsclickbyxpath(Login.Signup);
 			Thread.sleep(1000);
-			wb.WaitUntillVisiblility(dict.SignupWindow);
-			if (wb.getText(dict.SignupWindow).equals("let the joy begin")) {
+			wb.WaitUntillVisiblility(Login.SignupWindow);
+			if (wb.getText(Login.SignupWindow).equals("let the joy begin")) {
 				System.out.println("Signup window is present");
 				String Username = ReadSheet("Login", "UserName", 3);
 				String Pass = ReadSheet("Login", "Password", 3);
 				Username = Splitter(Username);
 				String Name = ReadSheet("Login", "Name", 4);
-				wb.enterTextByID(dict.SignupName, Name);
+				wb.enterTextByID(Login.SignupName, Name);
 
-				wb.enterTextByID(dict.SignupEmail, Username);
+				wb.enterTextByID(Login.SignupEmail, Username);
 
-				wb.enterTextByID(dict.SignupPassword, Pass);
-				//
-				wb.ClickbyXpath(dict.SignupSubmit);
-				// Thread.sleep(3000);
-				if (wb.getText(dict.VerifySignup).equalsIgnoreCase(Name)) {
-					wb.ClickbyXpath(dict.skipseller);
+				wb.enterTextByID(Login.SignupPassword, Pass);
+				wb.Jsclickbyxpath(Login.SignupSubmit);
+				Thread.sleep(3000);
+				if (wb.getText(Login.VerifySignup).equalsIgnoreCase(Name)) {
+					wb.Jsclickbyxpath(Login.skipseller);
 					System.out.println("Sign up was successfull");
-					if (wb.getText(dict.VerifyMakaanLogin1).equalsIgnoreCase(Username.substring(0, 1))) {
+					if (wb.getText(Login.VerifyMakaanLogin1).equalsIgnoreCase(Username.substring(0, 1))) {
 						System.out.println("Login successfull");
 						return true;
 					}
-				} else if (wb.getText(dict.ErrorSignup).contains("User already registered")) {
+				} else if (wb.getText(Login.ErrorSignup).contains("User already registered")) {
 					System.err.println("Not able to perform signup successfully as user already registered");
-					wb.ClickbyXpath(dict.closeLogin);
+					wb.Jsclickbyxpath(Login.closeLogin);
 					return false;
 				}
-				else if (wb.getText(dict.ErrorSignup).contains("error")) {
+				else if (wb.getText(Login.ErrorSignup).contains("error")) {
 					System.err.println("Not able to perform signup successfully as Throws some error");
-					wb.ClickbyXpath(dict.closeLogin);
+					wb.Jsclickbyxpath(Login.closeLogin);
+					SearchMiddleware.closechat();
 					return false;
 				}
 
@@ -445,8 +464,8 @@ public class LoginMiddleware {
 		int Low = 10;
 		int High = 1000;
 		int Result = r.nextInt(High - Low) + Low;
-		String front = Value.substring(0, 13);
-		String back = Value.substring(13, 23);
+		String front = Value.substring(0, 11);
+		String back = Value.substring(11, 20);
 		front = front + "+" + Result + back;
 		System.out.println("String " + front);
 		return front;
