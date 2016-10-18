@@ -34,21 +34,9 @@ public class Webhelper {
 	static WebDriver driver = null;
 
 	public static void InitiateDriver() throws TimeoutException{
-
-		//FirefoxProfile profile = new FirefoxProfile();
-
-		/*profile.setPreference("browser.startup.homepage_override.mstone", "ignore");
-		profile.setPreference("startup.homepage_welcome_url", "about:blank");
-		profile.setPreference("startup.homepage_welcome_url.additional", "about:blank");
-		profile.setPreference("browser.startup.homepage", "about:blank");
-		System.setProperty("webdriver.firefox.bin", "/opt/firefox/firefox");
-		System.setProperty("webdriver.chrome.driver","/home/surabhi/labs/AutomationBuyerWeb/lib/chromedriver");
-		driver = new ChromeDriver();*/
 		System.setProperty("webdriver.gecko.driver","/Users/vikas/Documents/workspace/MakaanUI/lib/geckodriver");
 		driver = new FirefoxDriver();
-		
-		//driver.manage().window().setSize(new Dimension(1366, 768));
-		//driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
 		}
   public void GetURL(String URL) {
 		System.out.println("opening URL throgh webhelper");

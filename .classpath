@@ -11,6 +11,6 @@
 	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-3.13-20150929.jar"/>
 	<classpathentry kind="lib" path="lib/poi-scratchpad-3.13-20150929.jar"/>
 	<classpathentry kind="lib" path="lib/testng-6.8.jar" sourcepath="/Users/vikas/.m2/repository/org/testng/testng/6.8/testng-6.8-sources.jar"/>
-	<classpathentry kind="lib" path="/MobileWebAutomation/Jar/selenium-server-standalone-3.0.0-beta.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-server-standalone-3.0.0-beta.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
